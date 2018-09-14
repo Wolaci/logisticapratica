@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+	<link rel="stylesheet" type="text/css" href="projeto.css">
 	<meta charset="UTF-8">
 	<title>Just in Time</title>
 </head>
 <body>
 	<h1>Just in Time: Sistema de Controle de Cadeia de Suprimentos</h1>
-	<p></p>
-	<table border="1">
-		<tr>
+	<p>Gerenciamento de projeto</p>
+
+	<p>Pequeno passo para um aluno,mas um grande passo para um projeto bem feito!!</p>
+	<table >
+		<tr class="titulo">
 			<td id="name">Nome</td>
 			<td id="mail">Email</td>
 			<td id="fone">Telefone</td>
@@ -43,7 +46,6 @@
 			<td>jrlima150305@gmail.com</td>
 			<td>(81)98350-3386</td>
 		</tr>
-
 
 	</table>
 </body>
