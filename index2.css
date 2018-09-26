@@ -18,3 +18,14 @@
   background:#006000;
   box-shadow:0 5px 0 #003f00;
 }
+.info p{
+	font-family: bitstream vera sans;
+	margin: 0 auto;
+}
+.info img{
+	width: 500px;
+
+}
+.info fieldset{
+	margin: 20px;
+}

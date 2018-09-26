@@ -10,10 +10,10 @@
 			<header>
 				<img src="imagens/logomarca.png">
 				<ul type="none" class="btn">
-					<a href="#"><li>Início</li></a>
+					<a href="index.php"><li>Home</li></a>
 					<a href="#"><li>Cadastro</li></a>
-					<a href="#"><li>Ajuda</li></a>
-					<a href="#"><li>Sobre</li></a>
+					<a href="auxilio.php"><li>Ajuda</li></a>
+					<a href="sobre.php"><li>Sobre</li></a>
 				</ul>
 			</header>
 		</div>
