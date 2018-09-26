@@ -11,7 +11,7 @@
 				<img src="imagens/logomarca.png">
 				<ul type="none" class="btn">
 					<a href="index.php"><li>Home</li></a>
-					<a href="#"><li>Cadastro</li></a>
+					<a href="cadastro.php"><li>Cadastro</li></a>
 					<a href="auxilio.php"><li>Ajuda</li></a>
 					<a href="sobre.php"><li>Sobre</li></a>
 				</ul>
