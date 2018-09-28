@@ -5,7 +5,7 @@
  ?>
 <div class="info">
 	<fieldset>
-		<p>Para realizar o cadastro no nosso site é necessário clicar no botão com nome "cadastro" na página inicial, ao clicar você deve preencher com as informações requisitadas, ao efetuar o cadastro, você pode fazer login no nosso site quando quiser.</p>
+		<p>Para realizar o cadastro de produtos é necessário preencher os campos requisitados que são: o nome do produto, código do produto, validade do produto, data de chegada do produto e o cadastro do lote do produto.</p>
 	</fieldset>
 </div>
 </body>
