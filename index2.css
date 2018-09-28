@@ -18,6 +18,16 @@
   background:#006000;
   box-shadow:0 5px 0 #003f00;
 }
+.container ul{
+	margin-left: 13%;
+	margin-right: 15%;
+}
+.container img{
+	height: 100px;
+	width: 600px;
+	margin-left: 15%;
+	margin-right: 15%;
+}
 .info p{
 	font-family: bitstream vera sans;
 	margin: 0 auto;
@@ -28,4 +38,13 @@
 }
 .info fieldset{
 	margin: 20px;
+}
+.principal img{
+	width: 450px;
+	height: 350px;
+	float: right;
+}
+.principal fieldset{
+	margin-right: 15%;
+	margin-left: 15%;
 }

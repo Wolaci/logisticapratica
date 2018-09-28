@@ -8,7 +8,7 @@
 	<body>
 		<div class="container">
 			<header>
-				<img src="imagens/logomarca.png">
+				<img src="img/logomarca.png">
 				<ul type="none" class="btn">
 					<a href="index.php"><li>Home</li></a>
 					<a href="cadastro.php"><li>Cadastro</li></a>
