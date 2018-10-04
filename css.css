@@ -21,19 +21,22 @@ h3{
     font-family:American Typewriter, serif;
 }
 fieldset{
-    position: absolute;left:20px;top:10px; 
+    position: absolute;
     border-color:  #4CAF50;
     border-width:5px;
     border-style: solid;
     width: 300px;
+    margin-left: 15%;
+
 }
 
 
 .nav{
-    position: absolute;left:400px;top:10px;
+    position: absolute;
     border-color: #4CAF50;
     border-style: solid;    
     width: 500px;
+    margin-left: 35%;
 }
 table {
     font-family: arial, sans-serif;

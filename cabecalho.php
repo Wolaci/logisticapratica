@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Logística Prática</title>
 	<link rel="stylesheet" type="text/css" href="index2.css">
-</head>
+	</head>
 	<body>
 		<div class="container">
 			<header>

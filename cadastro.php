@@ -1,8 +1,8 @@
 <?php
 
-include 'conexao.php';
+//include 'conexao.php';
 
-
+require_once 'cabecalho.php';
 ?>
 
 <!DOCTYPE html>

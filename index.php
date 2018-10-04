@@ -23,7 +23,7 @@
 
 		<p>O modelo de gestão JIT propõe que a produção seja feita de acordo com a demanda, então, a empresa vai produzir naquele momento somente os produtos necessários, nas quantidades necessárias. E esse processo se repete em cada etapa da produção.</p>
 
-		<p>Com isso, em primeiro lugar, na medida em que se produz apenas aquilo que é demandado, ganha-se diminuindo a necessidade de espaço para estoque de insumos </p>
+		<p>Com isso, em primeiro lugar, na medida em que se produz apenas aquilo que é demandado, ganha-se diminuindo a necessidade de espaço para estoque de insumos e mercadorias. Em seguida, ganha-se com economia em transportadoras e sistemas de distribuição. E em terceiro, diminui-se o desperdício de insumos. </p>
 	</fieldset>
 </div>
 
