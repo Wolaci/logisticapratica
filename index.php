@@ -1,6 +1,6 @@
 <?php 
 	
-	require_once('cabecalho.php');
+	require_once('php/cabecalho.php');
 
 
  ?>
@@ -11,7 +11,7 @@
 		<p>Cortar custos sem perder qualidade. Ou melhor: cortar custos e ganhar, cada vez mais, em qualidade. Esse é o grande objetivo de todo empreendedor, principalmente daqueles cujo negócio envolve complexidade no processo produtivo. É o seu caso? Então você precisa conhecer o conceito de just-in-time, que pode ser a ferramenta que faltava para sua empresa dar esse passo qualitativo na produção.
 		</p>
 		<figure>
-			<img src="img/just-in-time.jpg">
+			<img src="../img/just-in-time.jpg">
 		</figure>
 
 		<p>Um dos pilares que fará a sua empresa se diferenciar no mercado é a sua operação logística. Quanto melhor você se sair na missão de desenvolver essa operação, menos custos terá, menor serão as suas taxas de desperdício, maior será a sua margem de lucro e, consequentemente, mais lucrativo será o seu negócio. O just-in-time é uma metodologia pensada e desenvolvida exatamente com esse objetivo: melhorar processos e cortar custos.</p>
