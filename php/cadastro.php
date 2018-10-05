@@ -1,6 +1,6 @@
 <?php
 
-//include 'conexao.php';
+//include 'cadprod/conexao.php';
 
 require_once 'cabecalho.php';
 ?>
@@ -10,7 +10,7 @@ require_once 'cabecalho.php';
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="css.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="../css/css.css" />
 	
 </head>
 <body>
@@ -19,7 +19,7 @@ require_once 'cabecalho.php';
 
  <h1>Cadastro</h1>
 
-	<form action="addNome.php" method="POST">
+	<form action="cadprod/addNome.php" method="POST">
 	
 		<h3>Cadastre o Produto</h3>
 		<input type="text" name="nome" placeholder="Digite o nome do Produto" > 
@@ -72,7 +72,7 @@ require_once 'cabecalho.php';
 									<td><?=$res['validade']?></td>
 									<td><?=$res['chegada']?></td>
 									<td><?=$res['lote']?></td>
-									<td><a href="rmNome.php?id=<?= $res['id'] ?>">X</a></td>
+									<td><a href="cadprod/rmNome.php?id=<?= $res['id'] ?>">X</a></td>
 									
 								</tr> 
 								<?php endwhile; ?>
