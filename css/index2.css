@@ -64,7 +64,7 @@
 	margin-right: 15%;
 }
 .container{
-	background-image: url(img/ivory-off-white-paper-texture.jpg);
+	background-image: url(../img/ivory-off-white-paper-texture.jpg);
 }
 .container img{
 	height: 100px;
@@ -84,7 +84,7 @@
 	/*margin: 20px;*/
 	margin-right: 15%;
 	margin-left: 15%;
-	background-image: url(img/grey-linen-texture-background_1053-253.jpg);
+	background-image: url(../img/grey-linen-texture-background_1053-253.jpg);
 	border: solid;
 
 }

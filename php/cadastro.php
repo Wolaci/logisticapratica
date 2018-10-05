@@ -2,7 +2,7 @@
 
 //include 'cadprod/conexao.php';
 
-require_once 'cabecalho.php';
+require_once '../cabecalho.php';
 ?>
 
 <!DOCTYPE html>
