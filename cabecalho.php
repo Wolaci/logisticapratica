@@ -14,6 +14,7 @@
 					<a href="cadastro.php"><li>Cadastro</li></a>
 					<a href="auxilio.php"><li>Ajuda</li></a>
 					<a href="sobre.php"><li>Sobre</li></a>
+					<a href="login.php"><li>Login</li></a>
 				</ul>
 			</header>
 		</div>
