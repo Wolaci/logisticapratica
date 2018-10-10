@@ -7,7 +7,7 @@
 	$apagar = $conn->prepare("DELETE FROM produto_pdo  WHERE id = $id");
 	$apagar->execute();
 
-	header('location:cadastro.php');
+	header('location:/php/cadastro.php');
 
 ?>
 

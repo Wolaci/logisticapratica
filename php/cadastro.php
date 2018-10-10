@@ -1,6 +1,6 @@
 <?php
 
-//include 'cadprod/conexao.php';
+include 'cadprod/conexao.php';
 
 require_once 'cabecalho.php';
 ?>
@@ -58,21 +58,24 @@ require_once 'cabecalho.php';
 		</tr>
 		<?php 
 		
+		
 		$nomes='SELECT * FROM produto_pdo';
 		
 		$result = $conn->query($nomes);
 		$res = $result->fetch(PDO::FETCH_ASSOC);
 
 
+		while($res = $result->fetch(PDO::FETCH_ASSOC)):	
+		  
 		
-		while($res = $result->fetch(PDO::FETCH_ASSOC)):?>
+		?>
 								<tr>
 									<td><?= $res['nome'] ?></td>
 									<td><?=$res['codigo'] ?></td>
 									<td><?=$res['validade']?></td>
 									<td><?=$res['chegada']?></td>
 									<td><?=$res['lote']?></td>
-									<td><a href="cadprod/rmNome.php?id=<?= $res['id'] ?>">X</a></td>
+									<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>">X</a></td>
 									
 								</tr> 
 								<?php endwhile; ?>
