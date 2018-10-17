@@ -1,8 +1,15 @@
-<?php
 
+<?php
+session_start();
+if ($_SESSION['login']) {
+	
 include 'cadprod/conexao.php';
 
 require_once 'cabecalho.php';
+}else{
+	header('location: /php/login/login.php');
+}			
+
 ?>
 
 <!DOCTYPE html>
@@ -58,14 +65,18 @@ require_once 'cabecalho.php';
 		</tr>
 		<?php 
 		
+		$nomeUs=$_SESSION['login'];
 		
-		$nomes='SELECT * FROM produto_pdo';
-		
-		$result = $conn->query($nomes);
-		$res = $result->fetch(PDO::FETCH_ASSOC);
+		$nomes=$conn->prepare('SELECT * FROM produto_pdo WHERE fk_user = :f');
+		$nomes->bindValue(":f",$nomeUs);
 
 
-		while($res = $result->fetch(PDO::FETCH_ASSOC)):	
+		
+		$nomes->execute();
+		// $res = $nomes->fetch(PDO::FETCH_ASSOC);
+
+
+		while($res = $nomes->fetch(PDO::FETCH_ASSOC)):	
 		  
 		
 		?>
@@ -81,5 +92,6 @@ require_once 'cabecalho.php';
 								<?php endwhile; ?>
 	</table>
 </fieldset>	
+<a href="login/logout.php"><button>sair</button></a>
 </body>
 </html>
