@@ -40,7 +40,7 @@ $pw2 = $_POST['pw2'];
 
 if ($pw1!=$pw2) {
 	session_start();
- 	header('location: /php/login/cad.php');
+ 	header('location: /php/login/login.php');
  	$_SESSION['erro']=true;
  } else {
  	$consulta = $conn->prepare("INSERT INTO usuario(user,senha) VALUES (?,?)");

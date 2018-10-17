@@ -5,7 +5,7 @@ if ($_SESSION['login']) {
 	
 include 'cadprod/conexao.php';
 
-require_once 'cabecalho.php';
+require_once '../index.php';
 }else{
 	header('location: /php/login/login.php');
 }			

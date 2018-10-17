@@ -1,5 +1,4 @@
 <?php
-session_start();
 $usuario=$_POST['login'];
 $pw=$_POST['senha'];
 
@@ -24,6 +23,7 @@ $obj = $stmt->fetchObject();
 //var_dump($obj);
 if($obj){
 
+session_start();
 $_SESSION['login'] = $_POST['login']; 
 header('Location: /php/cadastro.php'); 
 } else { 
