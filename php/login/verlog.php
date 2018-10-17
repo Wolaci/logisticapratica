@@ -25,7 +25,7 @@ if($obj){
 
 session_start();
 $_SESSION['login'] = $_POST['login']; 
-header('Location: /php/cadastro.php'); 
+header('Location: /php/homeuser.php'); 
 } else { 
 header('Location: login.php'); 
 } 
