@@ -2,7 +2,7 @@
 session_start();
 $user=$_POST['us'];
 
-require_once("../cadprod/conexao.php");
+include "../cadprod/conexao.php";
 $stmt = $conn->prepare("SELECT * FROM usuario WHERE user = ?"); 
 $stmt->bindParam(1,$user); 
 
@@ -39,9 +39,9 @@ $pw2 = $_POST['pw2'];
 
 
 if ($pw1!=$pw2) {
-	session_start();
+	//session_start();
  	header('location: /php/login/login.php');
- 	$_SESSION['erro']=true;
+ 	//$_SESSION['erro']=true;
  } else {
  	$consulta = $conn->prepare("INSERT INTO usuario(user,senha) VALUES (?,?)");
            $consulta->bindParam(1,$user);

@@ -1,7 +1,7 @@
 <?php
 
 $user = 'root';
-$pass = 'ifpe';
+$pass = '';
 
 
 try {

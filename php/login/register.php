@@ -2,13 +2,12 @@
 
 require_once '../../index.php';
 
-session_start();
+/*session_start();
 if ($_SESSION['erro']) {
 	echo "senhas erradas";
-}
+}*/
 
 ?>
-
 <form method="POST" action="vercad.php">
   <div class="imgcontainer">
   </div>
