@@ -1,9 +1,10 @@
-
 <?php
 session_start();
 if ($_SESSION['login']) {
 	
-include 'cadprod/conexao.php';
+include 'POO/Usuario.php';
+$u= new Usuario;
+$u->conectar();
 
 require_once '../index.php';
 }else{
@@ -11,7 +12,6 @@ require_once '../index.php';
 }			
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

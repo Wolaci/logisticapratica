@@ -1,9 +1,15 @@
 <?php
 session_start();
 $user=$_POST['us'];
+$pw1 = $_POST['pw1']; 
+$pw2 = $_POST['pw2'];
 
-include "../cadprod/conexao.php";
-$stmt = $conn->prepare("SELECT * FROM usuario WHERE user = ?"); 
+include "../POO/Usuario.php";
+$u = new Usuario;
+$u -> conectar();
+//$u -> verExisteUser($user);
+$u -> cadastrar($user,$pw1,$pw2);
+/*$stmt = $conn->prepare("SELECT * FROM usuario WHERE user = ?"); 
 $stmt->bindParam(1,$user); 
 
 
@@ -51,7 +57,7 @@ if ($pw1!=$pw2) {
            header('location: /php/cadastro.php');
            
  }
- }
+ }*/
 
 ?>
 
