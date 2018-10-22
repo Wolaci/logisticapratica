@@ -38,8 +38,14 @@ class Usuario
 		$stmt = $conn->prepare("SELECT * FROM usuario WHERE user = ?");
 		$stmt->execute([$user]);
 
+			session_destroy();
+			session_start();
 		if(!($stmt->rowCount()>0)){
+			session_destroy();
+			session_start();
 		if($pass!=$pass2){
+			session_destroy();
+			session_start();
 			$_SESSION['passErro'] = true;
 			$_SESSION['passInc'] = true;
 			header('location: /php/login/register.php');
