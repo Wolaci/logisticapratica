@@ -29,19 +29,21 @@ require_once '../index.php';
 	<form action="cadprod/addNome.php" method="POST">
 	
 		<h3>Cadastre o Produto</h3>
-		<input type="text" name="nome" placeholder="Digite o nome do Produto" > 
+		<input type="text" name="nome" placeholder="Digite o nome do Produto" required> 
 
 		<h3>Cadastre o Código do Produto</h3>
-		<input type="text" name="codigo" placeholder="Digite o codigo do Produto" >
+		<input type="text" name="codigo" placeholder="Digite o codigo do Produto" required>
 
 		<h3>Validade do Produto</h3>
-		<input type="date" name="validade" placeholder="dd/mm/aaaa">
+		<input type="date" name="validade" placeholder="dd/mm/aaaa" required>
 
 		<h3>Data da Chegada do Produto a Loja</h3>
-		<input type="date" name="chegada" placeholder="dd/mm/aaaa">
+		<input type="date" name="chegada" placeholder="dd/mm/aaaa" required>
 		
 		<h3>Cadastre o lote do Produto</h3>
-		<input type="text" name="lote" placeholder="Digite o lote">
+		<input type="text" name="lote" placeholder="Digite o lote" required>
+		<h3>quantidade</h3>
+		<input type="number" name="quant" placeholder="escolha a quantidade" required>
 
 
 		<input type="submit" value="Cadastrar no Sistema">
@@ -60,6 +62,7 @@ require_once '../index.php';
 			<th>validade</th>
 			<th>chegada</th>
 			<th>lote</th>
+			<th>quantidade</th>
 			<th>Excluir</th>
 
 		</tr>
@@ -86,6 +89,7 @@ require_once '../index.php';
 									<td><?=$res['validade']?></td>
 									<td><?=$res['chegada']?></td>
 									<td><?=$res['lote']?></td>
+									<td><?=$res['quantidade']?></td>
 									<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>">X</a></td>
 									
 								</tr> 

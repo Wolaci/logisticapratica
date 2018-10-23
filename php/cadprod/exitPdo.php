@@ -1,19 +1,19 @@
 <?php
 include 'conexao.php';
-
+session_start();
 $code= $_POST['code'];
-/*$minicode= $conn->prepare("SELECT * FROM produto_pdo WHERE codigo= $code");
-if($minicode->rowCount()>0){
-$apagar2 = $conn->prepare("DELETE FROM produto_pdo  WHERE codigo = ?");
-$apagar2->execute([$code]);
-
-header('location:/php/exit.php');
-
-}*/
+$quant=$_POST['quantities'];
 
 
-$apagar2 = $conn->prepare("DELETE FROM produto_pdo  WHERE codigo = ?");
-$apagar2->execute([$code]);
+
+$vender = $conn->prepare("SELECT quantidade FROM produto_pdo  WHERE codigo = ?");
+$vender->execute([$code]); 
+$adc=$vender->fetch();
+$soma=$adc[0]-$quant;
+
+$adicionar=$conn->prepare('UPDATE produto_pdo SET quantidade = ? WHERE codigo = ?  ');
+$adicionar->execute([$soma,$code]);
+
 
 header('location:/php/exit.php');
 
