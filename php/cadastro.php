@@ -1,11 +1,12 @@
 <?php
+
 session_start();
-if ($_SESSION['login']) {
+if (isset($_SESSION['login'])) {
 	
 include 'POO/Usuario.php';
 $u= new Usuario;
 $u->conectar();
-
+$nomeUs=$_SESSION['login'];
 require_once '../index.php';
 }else{
 	header('location: /php/login/login.php');
@@ -71,7 +72,7 @@ require_once '../index.php';
 		</tr>
 		<?php 
 		
-		$nomeUs=$_SESSION['login'];
+		
 		
 		$nomes=$conn->prepare('SELECT * FROM produto_pdo WHERE fk_user = :f');
 		$nomes->bindValue(":f",$nomeUs);
@@ -94,7 +95,6 @@ require_once '../index.php';
 									<td><?=$res['lote']?></td>
 									<td><?=$res['quantidade']?></td>
 									<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img src="../img/excluir.png"></excluir></a></td>
-									
 								</tr> 
 								<?php endwhile; ?>
 	</table>

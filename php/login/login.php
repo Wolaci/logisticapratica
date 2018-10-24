@@ -20,7 +20,7 @@ require_once('../../index.php');
     </label>
   </div>
   <?php  
-
+   session_destroy();
   session_start();
   if(isset($_SESSION['logErro'])){
     echo '<div class="container" style="text-align:center; border:2px solid #f00;   background-color:rgba(255,0,0,0.6);">';
