@@ -124,3 +124,12 @@ span.psw {
         width: 100%;
     }
 }
+
+/* CSS carrosel */
+
+.legenda_carrossel_1 h4{
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+
+
+}

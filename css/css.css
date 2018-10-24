@@ -1,0 +1,39 @@
+.botao_cadastro {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.botao_cadastro:hover {
+	opacity: 0.8;
+}
+.botao_sair {
+	    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+    margin-top: 25%;
+}
+h2 {
+	color: #f44336;
+}
+.field_cadastro{
+	background-image: url(../img/grey-linen-texture-background_1053-253.jpg);
+	border: solid;
+	margin-right: 50%;
+	margin-left: 20%;
+}
+.field_estoque{
+	background-image: url(../img/grey-linen-texture-background_1053-253.jpg);
+	border: solid;
+	margin-right: 20%;
+	margin-left: 51%;
+    margin-top: -29.38%;
+}

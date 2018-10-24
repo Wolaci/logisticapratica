@@ -22,44 +22,44 @@ require_once '../index.php';
 </head>
 <body>
 
-<fieldset>
+<fieldset class="field_cadastro">
 
- <h1>Cadastro</h1>
+ <h2>Cadastro</h2>
 
 	<form action="cadprod/addNome.php" method="POST">
 	
-		<h3>Cadastre o Produto</h3>
+		<b>Cadastre o Produto</b>
 		<input type="text" name="nome" placeholder="Digite o nome do Produto" > 
 
-		<h3>Cadastre o Código do Produto</h3>
-		<input type="text" name="codigo" placeholder="Digite o codigo do Produto" >
+		<b>Cadastre o Código do Produto</b>
+		<input type="text" name="codigo" placeholder="Digite o codigo do Produto"><br>
 
-		<h3>Validade do Produto</h3>
-		<input type="date" name="validade" placeholder="dd/mm/aaaa">
+		<b>Validade do Produto</b><br>
+		<input type="date" name="validade" placeholder="dd/mm/aaaa"><br>
 
-		<h3>Data da Chegada do Produto a Loja</h3>
-		<input type="date" name="chegada" placeholder="dd/mm/aaaa">
+		<br><b>Data da Chegada do Produto a Loja</b><br>
+		<input type="date" name="chegada" placeholder="dd/mm/aaaa"><br>
 		
-		<h3>Cadastre o lote do Produto</h3>
+		<br><b>Cadastre o lote do Produto</b>
 		<input type="text" name="lote" placeholder="Digite o lote">
 
 
-		<input type="submit" value="Cadastrar no Sistema">
+		<input class="botao_cadastro" type="submit" value="Cadastrar no Sistema">
 	</form>
 </fieldset>
 
-<fieldset class="nav">
+<fieldset class="field_estoque">
 	
-<h1>Estoque</h1>
+<h2>Estoque</h2>
 
 
 	<table border="1" cellpadding="5" cellspacing="0">
 		<tr>
-			<th>nome</th>
-			<th>codigo</th>
-			<th>validade</th>
-			<th>chegada</th>
-			<th>lote</th>
+			<th>Nome</th>
+			<th>Código</th>
+			<th>Validade</th>
+			<th>Chegada</th>
+			<th>Lote</th>
 			<th>Excluir</th>
 
 		</tr>
@@ -92,6 +92,6 @@ require_once '../index.php';
 								<?php endwhile; ?>
 	</table>
 </fieldset>	
-<a href="login/logout.php"><button>sair</button></a>
+<a href="login/logout.php"><button class="botao_sair">Sair</button></a>
 </body>
 </html>

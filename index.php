@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
@@ -17,14 +16,14 @@
         <img src="../../img/logos.png">
           <ul class="nav nav-tabs">
             <li>
-            <a class="btn btn-dark" href="home.php" role="button">Home</a>
+            <a class="btn btn-dark" href="/php/home.php" role="button">Home</a>
             </li>
             <li class="nav-item">
             </li>
               <a class="btn btn-dark" href="/php/sobre_novo.php" role="button">Sobre</a>
             <li class="nav-item">
             </li>
-              <a class="btn btn-dark" href="/php/login/login.php" role="button">Login</a>
+              
             <li class="nav-item">
             </li>
             </li>
@@ -36,10 +35,10 @@
 
             <li>
               <div class="btn-group">
-                <a type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Usuário</a>
+                <a type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Usuário</a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Login</a>
-                <a class="dropdown-item" href="#">Cadastro</a>
+                <a class="dropdown-item" href="/php/login/login.php">Login</a>
+                <a class="dropdown-item" href="/php/login/register.php">Cadastro</a>
                 <div class="dropdown-divider"></div>
               </div>
             </div>

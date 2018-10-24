@@ -2,7 +2,7 @@
 require_once '../index.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
@@ -12,13 +12,25 @@ require_once '../index.php';
 	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="../img/2018-09-21 02.46.40 1.jpg" alt="First slide">
+      <img class="d-block w-100" src="../img/boneco2.jpg" alt="First slide">
+      <div class="legenda_carrossel_1">
+       	<div class="carousel-caption d-none d-md-block">
+    			<h4>Otimize sua produção e corte custos</h4>
+    			<p></p>
+    	</div>
+  </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../img/grey-linen-texture-background_1053-253.jpg" alt="Second slide">
+      <img class="d-block w-100" src="../img/boneco.jpg" alt="Second slide">
+            <div class="legenda_carrossel_1">
+       	<div class="carousel-caption d-none d-md-block">
+    			<h4>Administre Entradas e Saídas de Produtos</h4>
+    			<p></p>
+    	</div>
+  </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="../img/gestao-da-cadeia-logistica-wp-1038x576-1.jpg" alt="Third slide">
+      <img class="d-block w-100" src="../img/boneco3.jpg" alt="Third slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
