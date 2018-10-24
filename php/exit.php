@@ -1,7 +1,7 @@
 <?php 
 require_once('../index.php');
 session_start();
-
+$log=$_SSESSION['login'];
 ?>
 <div class="container" style="background-color:#f1f1f1">
 	<a href="/php/cadastro.php"><button type="button" class="cancelbtn">Cadastrar Produtos</button></a>
@@ -16,8 +16,13 @@ session_start();
 		<input type="number" placeholder="Inserir quantidade" name="quantities">
 		<button type="submit">Vender Produtos</button>		
 		<label>
-</div>
-     
+		</div>
+		<?php
+		//$saida=$conn->prepare('SELECT nome,quantidade FROM saida WHERE login = ?');
+
+		//$saida=execute([$log]);
+
+		?>
 
 
 	</form>

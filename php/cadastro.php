@@ -90,7 +90,7 @@ require_once '../index.php';
 									<td><?=$res['chegada']?></td>
 									<td><?=$res['lote']?></td>
 									<td><?=$res['quantidade']?></td>
-									<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>">X</a></td>
+									<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img src="../img/excluir.png"></excluir></a></td>
 									
 								</tr> 
 								<?php endwhile; ?>
