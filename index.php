@@ -36,11 +36,36 @@
             <li>
               <div class="btn-group">
                 <a type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Usuário</a>
-              <div class="dropdown-menu">
+                    <?php 
+                    session_start();
+                    if (!isset($_SESSION['login'])){
+                      
+              echo '<div class="dropdown-menu">
                 <a class="dropdown-item" href="/php/login/login.php">Login</a>
                 <a class="dropdown-item" href="/php/login/register.php">Cadastro</a>
-                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div>';
+              }else{
+                echo
+                '<div class="dropdown-menu">
+                <a class="dropdown-item" href="/php/login/logout.php">Logout</a>
+                <div class="dropdown-divider"></div>';
+              }
+              
+              ?>
+
               </div>
+              <?php
+              if (isset($_SESSION['login'])) {
+                 echo
+                 '<div class="btn-group">
+                <a type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Produtos</a>
+                <div class="dropdown-menu">
+                <a class="dropdown-item" href="/php/cadastro.php">Cadastrar Produtos</a>
+                <a class="dropdown-item" href="/php/exit.php">Saída de Produtos</a>
+                <div class="dropdown-divider"></div>';
+              }
+              ?>
+                    
             </div>
             </li>
           

@@ -5,7 +5,7 @@ require_once '../index.php';
 ?>
 
 <div>
-	<fieldset>
+	<fieldset class="field_help">
 		<h1>Cadastro de produtos</h1>
 		<p>Para realizar o cadastro de produtos é necessário fazer login com seu nome de usuário e senha, após fazer isso você deve preencher os campos requisitados que são: o nome do produto, código do produto, validade do produto, data de chegada do produto e o cadastro do lote do produto.</p>
 		<h1>Login</h1>

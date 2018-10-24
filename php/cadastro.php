@@ -43,6 +43,10 @@ require_once '../index.php';
 		<br><b>Cadastre o lote do Produto</b>
 		<input type="text" name="lote" placeholder="Digite o lote">
 
+		<b>Quantidade</b><br>
+		<input type="number" name="quant" placeholder="Escolha a quantidade" required>
+
+
 
 		<input class="botao_cadastro" type="submit" value="Cadastrar no Sistema">
 	</form>
@@ -55,11 +59,13 @@ require_once '../index.php';
 
 	<table border="1" cellpadding="5" cellspacing="0">
 		<tr>
+
 			<th>Nome</th>
 			<th>Código</th>
 			<th>Validade</th>
 			<th>Chegada</th>
 			<th>Lote</th>
+			<th>Quantidade</th>
 			<th>Excluir</th>
 
 		</tr>
@@ -86,7 +92,8 @@ require_once '../index.php';
 									<td><?=$res['validade']?></td>
 									<td><?=$res['chegada']?></td>
 									<td><?=$res['lote']?></td>
-									<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>">X</a></td>
+									<td><?=$res['quantidade']?></td>
+									<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img src="../img/excluir.png"></excluir></a></td>
 									
 								</tr> 
 								<?php endwhile; ?>

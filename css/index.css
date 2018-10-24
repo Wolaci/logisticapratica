@@ -10,12 +10,19 @@
 	margin: 5px;
 }
 .field_home{
+    background-image: url(../img/grey-linen-texture-background_1053-253.jpg);
 	border: solid;
 	margin-right: 20%;
 	margin-left: 20%;
 }
 .field_home h1{
 	text-align: center;	
+}
+.field_help{
+    background-image: url(../img/grey-linen-texture-background_1053-253.jpg);
+    border: solid;
+    margin-right: 20%;
+    margin-left: 20%;
 }
 .imagem1 img{
 	float: right;
@@ -25,12 +32,13 @@
 	border: solid;
 }
 fieldset{
-	background-image: url(../img/grey-linen-texture-background_1053-253.jpg);
+	/*background-image: url(../img/grey-linen-texture-background_1053-253.jpg);*/
 	border: solid;
 	margin-right: 20%;
 	margin-left: 20%;
 }
 .sobre{
+    background-image: url(../img/grey-linen-texture-background_1053-253.jpg);
 	margin-right: 20%;
 	margin-left: 20%;
 	padding-left: 250px;
