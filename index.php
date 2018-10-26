@@ -12,7 +12,7 @@ session_start();
   <link rel="sortcut icon" href="/img/favicon.png" type="image/png" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../../css/index.css">
-
+<link rel="stylesheet" type="text/css" href="../css/seman/Semantic-UI-CSS-master/semantic.min.css">
   <title>Logística Prática</title>
 </head>
 <body>

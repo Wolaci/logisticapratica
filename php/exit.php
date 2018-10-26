@@ -22,15 +22,16 @@ $u->conectar();
 
 	</form>
 
-
-	<table style="text-align: center border:1px black solid ;">
+    <div class="imgcontainer" style="margin-right: 30%;
+	margin-left: 30%;">
+	<table class="ui inverted table" style="text-align:center;">
 		<h1>Vendas</h1>
 		<tr>
 			<th>nome</th>
 			<th>quantidade</th>
 		</tr>
 		<?php
-	     $saida = $conn->prepare('SELECT * FROM saida WHERE login =:l');
+	     $saida = $conn->prepare('SELECT * FROM Saida WHERE login =:l');
 	     $saida->bindValue(':l',$login);
 	     $saida->execute();
 
@@ -43,7 +44,10 @@ $u->conectar();
 			</tr>
 		<?php endwhile; ?>
 	</table>
-		<a href="/php/pdf/index.php"><button type="submit"  class="container"> efetuar comprar</button></a>
+	<a href="/php/pdf/pdf/index.php"><button type="submit"  class="container"> efetuar comprar</button></a>
+	</div>
+	
+		
 
 </body>
 </html>
