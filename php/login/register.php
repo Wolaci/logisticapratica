@@ -1,8 +1,8 @@
 <?php 
 
+session_start();
 require_once '../../index.php';
 
-session_start();
 /*
 if ($_SESSION['erro']) {
 	echo "senhas erradas";

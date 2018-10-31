@@ -1,6 +1,6 @@
 <?php 
+session_start();
 require_once('../index.php');
-
 
 $login=$_SESSION['login'];
 

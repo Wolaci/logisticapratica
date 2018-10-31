@@ -26,7 +26,7 @@ class Usuario
 
 		if($stmt->rowCount()>0){
 			$_SESSION['login'] = $_POST['login']; 
-			header('Location: /php/homeuser.php');
+			header('Location: /php/cadastro.php');
 		}else{
 			$_SESSION['logErro']=true;
 			$_SESSION['erro']=true;
