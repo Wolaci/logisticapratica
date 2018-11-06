@@ -16,7 +16,7 @@ include 'menu.php';
     			<img class="card-img-top" src="../img/raul.jpg" alt="Card image cap">
     			<div class="card-body">
       			<h5 class="card-title">Raul Barros</h5>
-      			<p class="card-text"></p>
+      			<p class="card-text">"Ou você morre como um herói, ou vive o bastante para se tornar um vilão."<br><br>Email: raulbarrosmr@gmail.com<br>Whatsapp: 81 98809-7751</p>
     			</div>
   			</div>
   			<div class="card">
