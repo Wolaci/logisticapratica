@@ -65,10 +65,10 @@ class Usuario
 	}
 
 	}
-	/*function verExisteUser($user){
-		global $conn;
-		exit();
-		}*/
+	// function verExisteUser($user){
+	// 	global $conn;
+	// 	exit();
+	// 	}
 		function logOut(){
 			header('location: login.php');
 		}

@@ -7,9 +7,9 @@ include 'POO/Usuario.php';
 $u= new Usuario;
 $u->conectar();
 $nomeUs=$_SESSION['login'];
-require_once '../index.php';
+require_once ('menu.php');
 }else{
-	//header('location: /php/login/login.php');
+	header('location: /php/login/login.php');
 }			
 
 ?>
@@ -100,5 +100,16 @@ require_once '../index.php';
 	</table>
 </fieldset>	
 <a href="login/logout.php"><button class="botao_sair">Sair</button></a>
+
 </body>
 </html>
+<?php
+ $alert=$conn->prepare('SELECT * FROM produto_pdo WHERE fk_user = :f');
+ $alert->bindValue(":f",$nomeUs);
+ $alert->execute();
+ $a=$alert->fetch();
+ $b=$a[7];
+ if($b<=0){
+ 	echo "alert(tá faltando coisa aq);";
+ }
+?>

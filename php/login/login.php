@@ -75,17 +75,26 @@ span.psw {
 
   <div class="container">
     <label for="uname"><b>Usuário</b></label>
-    <input type="text" placeholder="Ex: Luiz Inácio Lula da Silva" name="uname" required>
+    <input type="text" placeholder="Ex: Luiz Inácio Lula da Silva" name="login" required>
 
     <label for="psw"><b>Senha</b></label>
-    <input type="password" placeholder="Ex: ********" name="psw" required>
+    <input type="password" placeholder="Ex: ********" name="senha" required>
         
     <button type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
-  </div>
-
+  </div> 
+    <?php  
+   
+  if(isset($_SESSION['logErro'])){
+    echo '<div class="container" style="text-align:center; border:2px solid #f00;   background-color:rgba(255,0,0,0.6);">';
+    if (isset($_SESSION['erro'])) {
+      echo "login e/ou senha incorreto ";
+    }
+    echo '</div>';
+  }
+  ?>
   <div class="container" style="background-color:#f1f1f1">
     <button type="button" class="cancelbtn">Cancelar</button>
     <span class="psw">Forgot <a href="#">password?</a></span>

@@ -12,31 +12,49 @@
 		<div class="row">
 			<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 div1"><img src="/img/logos.png"></div>	
 		</div>
-	<!-- FIM LOGO DA PÁGINA -->	
-	
-	<!-- BOTÕES -->	
+		<!-- FIM LOGO DA PÁGINA -->	
+
+		<!-- BOTÕES -->	
 		<div class="row">
 			<div class="col-lg-7 col-md-9 col-sm-12 col-xs-12 div2">
 				<ul class="nav nav-tabs">
-  					<li class="nav-item">
-    					<a class="btn btn-dark" href="/index.php">Home</a>
-  					</li>
-  					<li class="nav-item">
-  						<a class="btn btn-dark" href="/php/ajuda.php">Ajuda</a>
-  					</li>
- 					<li class="nav-item dropdown">
-    					<a class="btn btn-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Usuário</a>
-    						<div class="dropdown-menu">
-      							<a class="dropdown-item" href="/php/login/login.php">Login</a>
-      							<a class="dropdown-item" href="/php/login/register.php">Cadastro</a>
-      								<!-- <div class="dropdown-divider"></div>
-      									<a class="dropdown-item" href="/php/logout.php">Logout</a>
-    						</div> -->
-  						</li>
-  					<li class="nav-item">
-    					<a class="btn btn-dark" href="/php/grupo.php">Quem Somos Nós</a>
-  					</li>
-					</ul>
+					<li class="nav-item">
+						<a class="btn btn-dark" href="/index.php">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="btn btn-dark" href="/php/ajuda.php">Ajuda</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="btn btn-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Usuário</a>
+							<?php  
+							if(isset($_SESSION['login'])){
+								echo'<div class="dropdown-menu">
+								<a class="dropdown-item" href="/php/login/logout.php">Logout</a>
+
+							</div>';
+						}else{
+						echo
+						'<div class="dropdown-menu">
+							<a class="dropdown-item" href="/php/login/login.php">Login</a>
+							<a class="dropdown-item" href="/php/login/register.php">Cadastro</a>';
+						}
+						?>
+					</li>
+					<li>
+						<?php  
+							if(isset($_SESSION['login'])){
+								echo'<a class="btn btn-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Produto</a>
+								<div class="dropdown-menu">
+								<a class="dropdown-item" href="/php/cadastro.php">Cadastro de Produto</a>
+                <a class="dropdown-item" href="/php/exit.php">Saída de Produto</a>
+							</div>';
+						}
+						?>
+					</li>
+					<li class="nav-item">
+						<a class="btn btn-dark" href="/php/grupo.php">Quem Somos Nós</a>
+					</li>
+				</ul>
 
 			<!--detalhe<nav>
 					<button type="button" class="btn btn-dark">Home</button>
@@ -47,7 +65,7 @@
 				</nav> -->
 			</div>
 		</div>
-	<!-- FIM DOS BOTÕES -->		
+		<!-- FIM DOS BOTÕES -->		
 	</div>
 </body> 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
