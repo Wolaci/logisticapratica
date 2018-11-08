@@ -21,20 +21,22 @@
     width: 60%;
     margin-top: 27.1%;
 }
-h2 {
+.produto h2 {
 	color: #f44336;
 }
-.field_cadastro{
-    border: white solid;
-	margin-right: 50%;
-	margin-left: 20%;
+.produto input{
+    /*margin-left: 35%;*/
+    /*margin-bottom: -60px;*/
+    margin-top: 10px;
 }
-.field_estoque{
-	border: white solid;
-	margin-right: 20%;
-	margin-left: 51%;
-    margin-top: -32.3%;
+.produto ul{
+    list-style: none;
+    font-weight: bold;
 }
+.produto fieldset{
+    border: solid;  
+}
+
 .field_estoque tr{
     border:1px;
 }
