@@ -109,7 +109,16 @@ require_once ('menu.php');
  $alert->execute();
  $a=$alert->fetch();
  $b=$a[7];
+ if($alert->rowCount()>0){
  if($b<=0){
- 	echo "alert(tá faltando coisa aq);";
- }
+
+    echo '<div class="container" style="text-align:center; border:2px solid #f00;   background-color:rgba(255,0,0,0.6);">';
+    
+      echo "É necessário uma reposição de estoque";
+    
+    echo '</div>';
+  }
+
+}
+
 ?>

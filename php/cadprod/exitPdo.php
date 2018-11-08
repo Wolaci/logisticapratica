@@ -15,7 +15,7 @@ $soma=$adc[1]-$quant;
 $adicionar=$conn->prepare('UPDATE produto_pdo SET quantidade = ? WHERE codigo = ?  ');
 $adicionar->execute([$soma,$code]);
 
-$saidaE= $conn->prepare('INSERT INTO saida(nome,quantidade,login) VALUES (?,?,?) ');
+$saidaE= $conn->prepare('INSERT INTO Saida(nome,quantidade,login) VALUES (?,?,?) ');
 $saidaE->execute([$adc[0],$quant,$log]);
 
 
