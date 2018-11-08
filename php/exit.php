@@ -44,7 +44,7 @@ $u->conectar();
 			</tr>
 		<?php endwhile; ?>
 	</table>
-	<a href="/php/pdf/pdf/index.php"><button type="submit"  class="container"> efetuar comprar</button></a>
+	<a href="/php/pdf/index.php"><button type="submit"  class="container"> efetuar comprar</button></a>
 	</div>
 	
 		
