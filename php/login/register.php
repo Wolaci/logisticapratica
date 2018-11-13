@@ -116,6 +116,5 @@ span.psw {
   <div class="container" style="background-color:#f1f1f1">
     <a href="login.php"><button type="button" class="cancelbtn">Entrar</button></a>
     <button type="button" class="cancelbtn">Cancelar</button>
-    <span class="psw">Esqueceu a <a href="#">senha?</a></span>
   </div>
 </form>

@@ -10,7 +10,7 @@
 	<!-- LOGO DA PÁGINA -->
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 div1"><img src="/img/logos.png"></div>	
+			<div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 div1"><img src="/img/logos2.png"></div>	
 		</div>
 		<!-- FIM LOGO DA PÁGINA -->	
 

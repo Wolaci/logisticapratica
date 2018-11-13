@@ -2,10 +2,7 @@
 session_start();
 require('../menu.php');
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -68,8 +65,7 @@ span.psw {
     }
 }
 </style>
-</head>
-<body>
+
 <form action="../login/verlog.php" method="post">
 
 
@@ -96,10 +92,8 @@ span.psw {
   }
   ?>
   <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancelar</button>
+    <a href="../../index.php"><button type="button" class="cancelbtn">Cancelar</button></a>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form>
 
-</body>
-</html>
