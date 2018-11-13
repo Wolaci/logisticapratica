@@ -29,9 +29,7 @@
 							<?php  
 							if(isset($_SESSION['login'])){
 								echo'<div class="dropdown-menu">
-								<a class="dropdown-item" href="/php/login/logout.php">Logout</a>
-
-							</div>';
+								<a class="dropdown-item" href="/php/login/logout.php">Logout</a>';
 						}else{
 						echo
 						'<div class="dropdown-menu">

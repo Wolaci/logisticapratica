@@ -32,11 +32,14 @@
 .produto ul{
     list-style: none;
     font-weight: bold;
+    color: white;
 }
 .produto fieldset{
-    border: solid;  
+    border: solid;
+    color: white;  
 }
 
 .field_estoque tr{
     border:1px;
+    color: white;
 }

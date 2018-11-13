@@ -1,7 +1,6 @@
 <?php
-
 session_start();	
-if ($_SESSION['login']) {
+if (isset($_SESSION['login'])) {
 	
 include 'POO/Usuario.php';
 $u= new Usuario;
@@ -11,7 +10,6 @@ require_once ('menu.php');
 }else{
 	header('location: /php/login/login.php');
 }			
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +23,8 @@ require_once ('menu.php');
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
-			<div class="produto">
+		<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12" >
+			<div class="produto" >
  				<h2>Cadastro de Produtos</h2>
 					<fieldset>
 					<form action="cadprod/addNome.php" method="POST">
