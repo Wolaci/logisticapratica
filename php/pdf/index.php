@@ -7,23 +7,30 @@ include '../POO/Usuario.php';
 $u = new Usuario;
 $u->conectar();
 
-$html = "<table>";
-$html .='<thead>';
+$html = "<html>";
+$html .="<head>";
+$html .="<style></style>"
 
-$html .='<tr>';
+$html .="</head>";
+$html .="<body>";
+$html .="</body>";
+$html .= "</html>";
+// $html .='<thead>';
+
+// $html .='<tr>';
 
 
-$html .='<td>nome</td>';
-$html .='<td>quantidade</td>';
+// $html .='<td>nome</td>';
+// $html .='<td>quantidade</td>';
 
 
-$html .='</tr>';
-$html .='</thead>';
+// $html .='</tr>';
+// $html .='</thead>';
 
 
-$saida = $conn->prepare('SELECT * FROM saida WHERE login =:l');
-$saida->bindValue(':l',$login);
-$saida->execute();
+// $saida = $conn->prepare('SELECT * FROM saida WHERE login =:l');
+// $saida->bindValue(':l',$login);
+// $saida->execute();
 
 
 while ($res=$saida->fetch(PDO::FETCH_ASSOC)) {
