@@ -11,7 +11,7 @@ class Usuario
 	{
 		global $conn;
 		try {
-			$conn = new PDO("mysql:host=localhost;dbname=id7218638_logistica", 'root','ifpe');
+			$conn = new PDO("mysql:host=localhost;port=20000;dbname=id7218638_logistica", 'root','');
 		} catch (PDOException $e) {
 			echo "Connection failed: " . $e->getMessage();
 		}
@@ -26,7 +26,8 @@ class Usuario
 
 		if($stmt->rowCount()>0){
 			$_SESSION['login'] = $_POST['login']; 
-			header('Location: /php/cadastro.php');
+			header('Location: /php/homeuser.php');
+			
 		}else{
 			$_SESSION['logErro']=true;
 			$_SESSION['erro']=true;
@@ -65,10 +66,10 @@ class Usuario
 	}
 
 	}
-	// function verExisteUser($user){
-	// 	global $conn;
-	// 	exit();
-	// 	}
+	/*function verExisteUser($user){
+		global $conn;
+		exit();
+		}*/
 		function logOut(){
 			header('location: login.php');
 		}
