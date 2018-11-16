@@ -9,10 +9,15 @@ $u->conectar();
 
 $html = "<html>";
 $html .="<head>";
-$html .="<style></style>"
+$html .="<style>
 
+        </style>"
 $html .="</head>";
 $html .="<body>";
+$html .='<table class="printer-ticket">';
+$html .=
+$html .=
+$html .="<table>";
 $html .="</body>";
 $html .= "</html>";
 // $html .='<thead>';

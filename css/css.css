@@ -43,3 +43,6 @@
     border:1px;
     color: white;
 }
+.produto table, tr, th{
+    color: white;
+}

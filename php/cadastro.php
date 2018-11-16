@@ -6,7 +6,7 @@ include 'POO/Usuario.php';
 $u= new Usuario;
 $u->conectar();
 $nomeUs=$_SESSION['login'];
-include'menu.php';
+require_once ('menu.php');
 }else{
 	header('location: /php/login/login.php');
 }			

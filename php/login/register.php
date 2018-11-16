@@ -13,7 +13,7 @@ if ($_SESSION['erro']) {
 <html>
 <head>
   <style>
-body {color:white;font-family: Arial, Helvetica, sans-serif;}
+body {font-family: Arial, Helvetica, sans-serif;}
 
 input[type=text], input[type=password] {
     width: 100%;
