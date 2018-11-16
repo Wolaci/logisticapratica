@@ -94,13 +94,20 @@ if (isset($_SESSION['login'])) {
 						<td><?=$res['quantidade']?></td>
 						<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img src="../img/excluir.png"></excluir></a></td>
 						<td><?php 
-							$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f AND quantidade = "0"');
-							$alert->bindValue(":f",$nomeUs);
+							//$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f AND nome="$res[nome]" AND quantidade="0"');
+							$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = ? AND quantidade=?'); 
+							$alert->bindValue(1,$nomeUs);
+							$alert->bindValue(2,$res['quantidade']);
 							$alert->execute();
+							$a=$alert->fetch();
+							$b=$a[0];
+							
 
-							if($alert){
+							if($b<=0){
 								echo "<img width='30px' height='30px' src='../img/alert.png'>";
-								} ?></td>
+								}else{
+									echo "<img width='30px' height='30px' src='../img/okay.png'>";
+									} ?></td>
 						</tr> 
 					<?php endwhile; ?>
 				</table>	
@@ -113,7 +120,7 @@ if (isset($_SESSION['login'])) {
 
 		</html>
 		<?php
-		$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f AND quantidade = "0"');
+		$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f');
 		$alert->bindValue(":f",$nomeUs);
 		$alert->execute();
 		$a=$alert->fetch();
