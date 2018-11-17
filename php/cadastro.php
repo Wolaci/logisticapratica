@@ -1,15 +1,15 @@
 <?php
-session_start();	
-if (isset($_SESSION['login'])) {
+//session_start();	
+//if (isset($_SESSION['login'])) {
 	
-	include 'POO/Usuario.php';
-	$u= new Usuario;
-	$u->conectar();
-	$nomeUs=$_SESSION['login'];
+//	include 'POO/Usuario.php';
+//	$u= new Usuario;
+//	$u->conectar();
+//	$nomeUs=$_SESSION['login'];
 	require_once ('menu.php');
-}else{
-	header('location: /php/login/login.php');
-}			
+//}else{
+//	header('location: /php/login/login.php');
+//}			
 ?>
 <!DOCTYPE html>
 <html lang="en">
