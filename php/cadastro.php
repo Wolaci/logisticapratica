@@ -12,7 +12,7 @@ if (isset($_SESSION['login'])) {
 }			
 		
 ?>
-<body>
+
 <div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12" >
@@ -63,6 +63,7 @@ if (isset($_SESSION['login'])) {
 						<th>Lote</th>
 						<th>Quantidade</th>
 						<th>Excluir</th>
+						<th>situação do estoque</th>
 					</tr>
 					<?php 
 
@@ -87,7 +88,7 @@ if (isset($_SESSION['login'])) {
 						<td><?=$res['quantidade']?></td>
 						<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img src="../img/excluir.png"></excluir></a></td>
 						<td><?php 
-							//$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f AND nome="$res[nome]" AND quantidade="0"');
+							
 							$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = ? AND quantidade=?'); 
 							$alert->bindValue(1,$nomeUs);
 							$alert->bindValue(2,$res['quantidade']);
@@ -112,22 +113,4 @@ if (isset($_SESSION['login'])) {
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
 
 		</html>
-		<?php
-		$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f');
-		$alert->bindValue(":f",$nomeUs);
-		$alert->execute();
-		$a=$alert->fetch();
-		$b=$a[7];
-		if($alert->rowCount()>0){
-			if($b<=0){
-
-				echo '<div class="container" style="text-align:center; border:2px solid #f00;   background-color:rgba(255,0,0,0.6);">';
-
-				echo "É necessário uma reposição de estoque";
-
-				echo '</div>';
-			}
-
-		}
-
-		?>
+		
