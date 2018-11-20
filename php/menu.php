@@ -51,6 +51,7 @@
 								<a class="dropdown-item" href="/php/cadastro.php">Cadastro de Produto</a>
 								<a class="dropdown-item" href="/php/exit.php">Saída de Produto</a>
 								<a class="dropdown-item" href="/php/listar.php">Listar Produtos</a>
+								<a class="dropdown-item" href="/php/compoe.php">Compor Produtos</a>
 							</div>
 						</li>
 					</ul>
