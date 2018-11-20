@@ -1,27 +1,19 @@
 <?php
-//session_start();	
-//if (isset($_SESSION['login'])) {
+session_start();	
+if (isset($_SESSION['login'])) {
 	
-//	include 'POO/Usuario.php';
-//	$u= new Usuario;
-//	$u->conectar();
-//	$nomeUs=$_SESSION['login'];
+	include 'POO/Usuario.php';
+	$u= new Usuario;
+	$u->conectar();
+	$nomeUs=$_SESSION['login'];
 	require_once ('menu.php');
-//}else{
-//	header('location: /php/login/login.php');
-//}			
+}else{
+	header('location: /php/login/login.php');
+}			
+		
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" media="screen" href="../css/css.css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</head>
 <body>
-
-	<div class="container">
+<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12" >
 				<div class="produto" >
@@ -46,6 +38,10 @@
 
 								<li>Quantidade</li>
 								<input type="number" name="quant" placeholder="Escolha a quantidade" required>
+
+								<li>Estoque de segurança</li>
+								<input type="number" name="estoque" placeholder="Estoque de segurança" required>
+
 							</div>
 							<input class="botao_cadastro" type="submit" value="Cadastrar no Sistema">
 						</ul>
@@ -74,9 +70,6 @@
 
 					$nomes=$conn->prepare('SELECT * FROM produto_pdo WHERE fk_user = :f');
 					$nomes->bindValue(":f",$nomeUs);
-
-
-
 					$nomes->execute();
 		// $res = $nomes->fetch(PDO::FETCH_ASSOC);
 
@@ -111,7 +104,7 @@
 						</tr> 
 					<?php endwhile; ?>
 				</table>	
-				<a href="login/logout.php"><button class="botao_sair">Sair</button></a>
+				
 			</div>
 		</body>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
