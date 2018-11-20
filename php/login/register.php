@@ -57,6 +57,9 @@ img.avatar {
 .container {
     padding: 16px;
 }
+.container label, b{
+  color:white;
+}
 
 span.psw {
     float: right;
