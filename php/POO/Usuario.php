@@ -11,13 +11,13 @@ class Usuario
 	{
 		global $conn;
 		try {
-			$conn = new PDO("mysql:host=localhost;port=20000;dbname=id7218638_logistica", 'root','');
+			$conn = new PDO("mysql:host=localhost;port=20000;dbname=id7218638_logistica", 'root','vanda85804346');
 		} catch (PDOException $e) {
 			echo "Connection failed: " . $e->getMessage();
 		}
 	}
 	function logar($user,$pass)
-	{
+	{ 
 		global $conn;
 		session_start();
 		$stmt = $conn->prepare("SELECT * FROM usuario WHERE user = ? AND senha = ?");
@@ -26,7 +26,7 @@ class Usuario
 
 		if($stmt->rowCount()>0){
 			$_SESSION['login'] = $_POST['login']; 
-			header('Location: /php/homeuser.php');
+			header('Location: /php/cadastro.php');
 			
 		}else{
 			$_SESSION['logErro']=true;
