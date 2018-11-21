@@ -22,6 +22,8 @@ require_once '../php/menu.php';
 		<div class="t1">
 		<h1> Cadastro de Produtos</h1>
 		<p>Para realizar o cadastro de produtos é necessário fazer login com seu nome de usuário e senha, após fazer isso você deve preencher os campos requisitados que são: o nome do produto, código do produto, validade do produto, data de chegada do produto e o cadastro do lote do produto.</p>
+		<h1>Venda de Produtos</h1>
+		<p>Para realizar a venda de produtos você deve clicar no botão "Produto", após isso você vai clicar em "Saída de produtos" assim você será redirecionado para uma página onde você deve preencher o que é pedido para assim vender o seu produto.</p>
 		<h1> Login</h1>
 		<p>Para fazer login é necessário inserir seu nome de usuário e a senha registrada.</p>
 		<h1> Registro</h1>
