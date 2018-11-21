@@ -6,7 +6,6 @@ $u= new Usuario();
 $u -> conectar();
 $nomeUs=$_SESSION['login'];
 ?>
-<div class="container">
 <div class="row">
 			<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">	
 				<h2>Estoque</h2>
@@ -60,7 +59,6 @@ $nomeUs=$_SESSION['login'];
 						</tr> 
 					<?php endwhile; ?>
 				</table>
-				</div>
 				</div>
 </body>
 </html>

@@ -128,11 +128,6 @@ span.psw {
     .cancelbtn {
        width: 100%;
     }
-    #comp{
-    	width: 200px;
-    	height: 200px;
-    	background-color: white;
-    }
 }
 </style>
 	<title></title>
@@ -144,13 +139,12 @@ span.psw {
 	<form action="/php/cadprod/addcomp.php" method="POST" >
 	<div class="container">
 	<h1>produto</h1>
-	<input type="text" name="prod" placeholder="digite o nome do produto" required>
-	<input type="text" name="prod_cod" placeholder="digite o  do componente" required>
+	<input type="text" name="prod" required>
+	<input type="text" name="prod_cod" required>
 	<h1>componente</h1>
-	<input type="text" placeholder="digite o nome do componente" name="comp">
-	<input type="text" name="comp_cod" placeholder="digite o codigo do componente" required> 
-	<button type="submit">enviar</button>
-	<div id="comp">ver os componentes</div>
+	<input type="text" name="comp">
+	<input type="text" name="comp_cod">
+	<input type="submit" >
 	</div>
 	</form>
 </body>
