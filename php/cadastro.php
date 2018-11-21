@@ -100,34 +100,16 @@ if (isset($_SESSION['login'])) {
 								echo "<img width='30px' height='30px' src='../img/alert.png'>";
 								}else{
 									echo "<img width='30px' height='30px' src='../img/okay.png'>";
-									} ?></td>
+									} ?>
+										
+									</td>
 						</tr> 
 					<?php endwhile; ?>
 				</table>	
 				
 			</div>
 		</body>
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+
 
 		</html>
-		<?php
-		$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f');
-		$alert->bindValue(":f",$nomeUs);
-		$alert->execute();
-		$a=$alert->fetch();
-		$b=$a[7];
-		if($alert->rowCount()>0){
-			if($b<=0){
-
-				echo '<div class="container" style="text-align:center; border:2px solid #f00;   background-color:rgba(255,0,0,0.6);">';
-
-				echo "É necessário uma reposição de estoque";
-
-				echo '</div>';
-			}
-
-		}
-
-		?>
+		
