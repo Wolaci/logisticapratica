@@ -7,49 +7,11 @@ include '../POO/Usuario.php';
 $u = new Usuario;
 $u->conectar();
 
-$html = "<html>";
-$html .="<head>";
-$html .="<style>
+ob_start();
+include 'saida.php';
+$html=ob_get_contents();
+ob_end_clean();
 
-        </style>"
-$html .="</head>";
-$html .="<body>";
-$html .='<table class="printer-ticket">';
-$html .="<thead>";
-$html .="<tr>";
-$html .=	'<th class="title" colspan="3">Logística Prática</th>'
-$html .="</tr>";
-$html .="</thead>";
-$html .="</table>"
-$html .="<table>";
-$html .="</body>";
-$html .= "</html>";
-// $html .='<thead>';
-
-// $html .='<tr>';
-
-
-// $html .='<td>nome</td>';
-// $html .='<td>quantidade</td>';
-
-
-// $html .='</tr>';
-// $html .='</thead>';
-
-
-// $saida = $conn->prepare('SELECT * FROM saida WHERE login =:l');
-// $saida->bindValue(':l',$login);
-// $saida->execute();
-
-
-while ($res=$saida->fetch(PDO::FETCH_ASSOC)) {
-	$html .='<tbody>';
-	$html .= '<tr><td>'.$res['nome'].'</td>';
-	$html .= '<td>'.$res['quantidade'].'</td></tr>';
-	$html .='</tbody>';
-}
-
-$html .='</table>';
 
 
 $dompdf = new DOMPDF();
