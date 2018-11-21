@@ -86,9 +86,9 @@ span.psw {
 	<h1>Componentes</h1>
 	<input type="text" name="comp" placeholder="digite o nome do componente ">
 	<input type="text" name="comp_cod" placeholder="digite o nome do componente">
-    <input type="text" name="quant_comp">
+    <input type="text" name="quant_comp" placeholder="escolha a quantidade de componentes">
 	<button class="submit">enviar</button>
-    <h1>opa</h1>>
+    
 	</div>
 	</form>
 </body>
