@@ -94,7 +94,7 @@ span.psw {
 	</form>
     <div><button id='produto'>ver seus produtos</button></div>
     <div id="show"> <div class="container">
-<div class="hiding">
+<div id="pjt" class="d-none">
             <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">    
                 <h2>Estoque</h2>
                 <table border="1" cellpadding="5" cellspacing="0">
@@ -112,7 +112,7 @@ span.psw {
 
 
                     $nomes=$conn->prepare('SELECT * FROM produto_pdo WHERE fk_user = :f');
-                    $nomes->bindValue(":f",$nomeUs);
+                    $nomes->bindValue(":f",$_SESSION['login']);
                     $nomes->execute();
         // $res = $nomes->fetch(PDO::FETCH_ASSOC);
 
@@ -151,9 +151,11 @@ span.psw {
                 </div></div>
      <script type="text/javascript">
         var prod = document.getElementById('produto');
-        var s = document.getElementById('show')
+        var s = document.getElementById('show');
+        var p = document.getElementById('pjt');
         prod.onclick= function () {
-            s.innerHTML =""
+            console.log('oi');
+            p.className = "";
         }
     </script> 
 </body>
