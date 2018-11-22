@@ -18,9 +18,10 @@ class Produto {
 
 		$addProd=$conn->prepare('SELECT id,quantidade FROM produto_pdo WHERE nome = ? AND codigo = ?');
 		$addProd->execute([$prod,$prodcod]);
+
 		$addComp = $conn->prepare('SELECT id,quantidade FROM produto_pdo WHERE nome = ? AND codigo = ?');
 
-		$addComp->execute([$comp,$compcod]);
+		$addComp->execute([$comp,$compcod,]);
 		$a = $addProd->fetch();
 		$b = $addComp->fetch();
 		if($b[1]>$quantcomp){
@@ -30,9 +31,9 @@ class Produto {
 
 
 		 if ($addProd->rowCount()>0 && $addComp->rowCount()>0) {
-		 	$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente) 
-		 		VALUES (?,?)');
-		 	$compoe->execute([$a[0],$b[0]]);
+		 	$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente,quantidade) 
+		 		VALUES (?,?,?)');
+		 	$compoe->execute([$a[0],$b[0],$quantcomp]);
 		 }
 	}
 }
