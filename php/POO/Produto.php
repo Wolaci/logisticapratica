@@ -30,11 +30,25 @@ class Produto {
 		}
 
 
-		 if ($addProd->rowCount()>0 && $addComp->rowCount()>0) {
-		 	$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente,quantidade) 
-		 		VALUES (?,?,?)');
-		 	$compoe->execute([$a[0],$b[0],$quantcomp]);
-		 }
+		if ($addProd->rowCount()>0 && $addComp->rowCount()>0) {
+			$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente,quantidade) 
+				VALUES (?,?,?)');
+			$compoe->execute([$a[0],$b[0],$quantcomp]);
+		}
+	}
+	function saida($code,$quant){
+		global $conn;
+
+		$vender = $conn->prepare("SELECT nome,quantidade FROM produto_pdo  WHERE codigo = ?");
+		$vender->execute([$code]); 
+		$adc=$vender->fetch();
+		$soma=$adc[1]-$quant;
+
+		$adicionar=$conn->prepare('UPDATE produto_pdo SET quantidade = ? WHERE codigo = ?  ');
+		$adicionar->execute([$soma,$code]);
+
+		$saidaE= $conn->prepare('INSERT INTO Saida(nome,quantidade,login) VALUES (?,?,?) ');
+		$saidaE->execute([$adc[0],$quant,$_SESSION['login']]);
 	}
 }
 
