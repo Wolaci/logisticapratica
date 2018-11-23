@@ -17,7 +17,7 @@ class Usuario
 		}
 	}
 	function logar($user,$pass)
-	{
+	{ 
 		global $conn;
 		session_start();
 		$stmt = $conn->prepare("SELECT * FROM usuario WHERE user = ? AND senha = ?");
@@ -27,6 +27,7 @@ class Usuario
 		if($stmt->rowCount()>0){
 			$_SESSION['login'] = $_POST['login']; 
 			header('Location: /php/cadastro.php');
+			
 		}else{
 			$_SESSION['logErro']=true;
 			$_SESSION['erro']=true;
@@ -65,10 +66,10 @@ class Usuario
 	}
 
 	}
-	// function verExisteUser($user){
-	// 	global $conn;
-	// 	exit();
-	// 	}
+	/*function verExisteUser($user){
+		global $conn;
+		exit();
+		}*/
 		function logOut(){
 			header('location: login.php');
 		}

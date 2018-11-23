@@ -11,7 +11,7 @@
 	opacity: 0.8;
 }
 .botao_sair {
-	    background-color: #4CAF50;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin-left: 20%;
@@ -32,11 +32,17 @@
 .produto ul{
     list-style: none;
     font-weight: bold;
+    color: white;
 }
 .produto fieldset{
-    border: solid;  
+    border: solid;
+    color: white;  
 }
 
 .field_estoque tr{
     border:1px;
+    color: white;
+}
+.produto table, tr, th{
+    color: white;
 }
