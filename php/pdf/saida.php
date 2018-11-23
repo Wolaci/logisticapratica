@@ -10,8 +10,8 @@ $nomes->bindValue(":f",$login);
 $nomes->execute();
 $_saida=$nomes->fetchALL(PDO::FETCH_ASSOC);
 
-ob_start();
 
+ob_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -166,17 +166,17 @@ ob_start();
 		</tfoot>
 		<?php foreach ($_saida as $list) : ?>
 			<tr>
-				<td><= $list['nome']?><td><td><?=$list['quantidade']?></td>
+				<td><?= $list['nome']?><td><td><?=$list['quantidade']?></td>
 			</tr>
-		<?php endforeach ?>
 
+		<?php endforeach ?>
 	</table>
 </body>
 </html>
 <?php
 $html=ob_get_contents();
+require_once 'vendor/autoload.php';
 use Dompdf\Dompdf;
-require_once 'dompdf/autoload.inc.php';
 //instancia o DOMPDF
 $dompdf = new Dompdf();
 

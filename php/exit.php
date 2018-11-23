@@ -82,7 +82,7 @@ span.psw {
 	</div>
 	<div class="container">
 		<label for="uname"><b>Digite o código do Produto</b></label>
-		<input type="text" placeholder="Inserir codigo" name="code" required>
+		<input type="text" placeholder="Inserir codigo ou nome do produto" name="code" required>
 		<input type="number" placeholder="Inserir quantidade" name="quantities">
 		<button type="submit">Vender Produtos</button>		
 		<label>

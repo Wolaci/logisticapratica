@@ -36,10 +36,10 @@ class Produto {
 			$compoe->execute([$a[0],$b[0],$quantcomp]);
 		}
 	}
-	function saida($code,$quant){
+	function saida($code,$quant,$log){
 		global $conn;
 
-		$vender = $conn->prepare("SELECT nome,quantidade FROM produto_pdo  WHERE codigo = ?");
+		$vender = $conn->prepare("SELECT nome,quantidade FROM produto_pdo  WHERE codigo = ? OR nome = ?");
 		$vender->execute([$code]); 
 		$adc=$vender->fetch();
 		$soma=$adc[1]-$quant;
@@ -48,7 +48,7 @@ class Produto {
 		$adicionar->execute([$soma,$code]);
 
 		$saidaE= $conn->prepare('INSERT INTO Saida(nome,quantidade,login) VALUES (?,?,?) ');
-		$saidaE->execute([$adc[0],$quant,$_SESSION['login']]);
+		$saidaE->execute([$adc[0],$quant,$log]);
 	}
 }
 

@@ -1,11 +1,15 @@
 <?php
 
 include '../POO/Usuario.php';
-$u = new Usuario();
-$u->conectar();	
+$log=$_SESSION['login'];
 $code= $_POST['code'];
 $quant=$_POST['quantities'];
+
+$u = new Usuario();
+$u->conectar();	
+
 include '../POO/Produto.php';
+
 $p = new Produto();
 $p->saida($code,$quant);
 
