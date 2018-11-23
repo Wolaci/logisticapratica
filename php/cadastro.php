@@ -21,26 +21,26 @@ if (isset($_SESSION['login'])) {
 					<fieldset>
 						<form action="cadprod/addNome.php" method="POST">
 							<ul>
-								<li>Cadastre o Produto</li>
-								<input type="text" name="nome" placeholder="Digite o nome do Produto">
+								Nome do Produto: 
+								<input type="text" name="nome" placeholder="Digite o nome do Produto"></br>
+								Código do Produto: 
+								<input type="text" name="codigo" placeholder="Digite o codigo do Produto"></br>
 
-								<li>Cadastre o Código do Produto</li>
-								<input type="text" name="codigo" placeholder="Digite o codigo do Produto">
+								Data da Chegada:
+								<input type="date" name="chegada" placeholder="dd/mm/aaaa"></br>
 
-								<li>Validade do Produto</li>
-								<input type="date" name="validade" placeholder="dd/mm/aaaa">
+								Validade:
+								<input type="date" name="validade" placeholder="dd/mm/aaaa"></br>
 
-								<li>Data da Chegada do Produto a Loja</li>
-								<input type="date" name="chegada" placeholder="dd/mm/aaaa">
 
-								<li>Cadastre o lote do Produto</li>
-								<input type="text" name="lote" placeholder="Digite o lote">
+								lote do Produto:
+								<input type="text" name="lote" placeholder="Digite o lote"></br>
 
-								<li>Quantidade</li>
-								<input type="number" name="quant" placeholder="Escolha a quantidade" required>
+								Quantidade: 
+								<input type="number" name="quant" placeholder="Escolha a quantidade" required></br>
 
-								<li>Estoque de segurança</li>
-								<input type="number" name="estoque" placeholder="Estoque de segurança" required>
+								Estoque de segurança: 
+								<input type="number" name="estoque" placeholder="Estoque de segurança" required></br>
 
 							</div>
 							<input class="botao_cadastro" type="submit" value="Cadastrar no Sistema">
