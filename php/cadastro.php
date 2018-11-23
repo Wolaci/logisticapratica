@@ -19,28 +19,40 @@ if (isset($_SESSION['login'])) {
 				<div class="produto" >
 					<h2>Cadastro de Produtos</h2>
 					<fieldset>
+<<<<<<< HEAD
+					<form action="cadprod/addNome.php" method="POST">
+						<ul>
+						<p>Cadastre o Produto</p>
+						<input type="text" name="nome" placeholder="Digite o nome do Produto">
+=======
 						<form action="cadprod/addNome.php" method="POST">
 							<ul>
+<<<<<<< HEAD
+								Nome do Produto: 
+								<input type="text" name="nome" placeholder="Digite o nome do Produto"></br>
+								Código do Produto: 
+								<input type="text" name="codigo" placeholder="Digite o codigo do Produto"></br>
+=======
 								<li>Cadastre o Produto</li>
 								<input type="text" name="nome" placeholder="Digite o nome do Produto">
+>>>>>>> ab91efa60d2066678f9b2338303837f4d9f2da68
+>>>>>>> c61e7ce1737fbd44a324c185183f6516a856a8cf
 
-								<li>Cadastre o Código do Produto</li>
-								<input type="text" name="codigo" placeholder="Digite o codigo do Produto">
+								Data da Chegada:
+								<input type="date" name="chegada" placeholder="dd/mm/aaaa"></br>
 
-								<li>Validade do Produto</li>
-								<input type="date" name="validade" placeholder="dd/mm/aaaa">
+								Validade:
+								<input type="date" name="validade" placeholder="dd/mm/aaaa"></br>
 
-								<li>Data da Chegada do Produto a Loja</li>
-								<input type="date" name="chegada" placeholder="dd/mm/aaaa">
 
-								<li>Cadastre o lote do Produto</li>
-								<input type="text" name="lote" placeholder="Digite o lote">
+								lote do Produto:
+								<input type="text" name="lote" placeholder="Digite o lote"></br>
 
-								<li>Quantidade</li>
-								<input type="number" name="quant" placeholder="Escolha a quantidade" required>
+								Quantidade: 
+								<input type="number" name="quant" placeholder="Escolha a quantidade" required></br>
 
-								<li>Estoque de segurança</li>
-								<input type="number" name="estoque" placeholder="Estoque de segurança" required>
+								Estoque de segurança: 
+								<input type="number" name="estoque" placeholder="Estoque de segurança" required></br>
 
 							</div>
 							<input class="botao_cadastro" type="submit" value="Cadastrar no Sistema">
@@ -51,10 +63,43 @@ if (isset($_SESSION['login'])) {
 		</div>
 
 
+<<<<<<< HEAD
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+	
+
+
+<div class="row">
+		<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">	
+			<h2>Estoque</h2>
+=======
 		<div class="row">
 			<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
 				<div class="produto">	
 				<h2>Estoque</h2>
+>>>>>>> ab91efa60d2066678f9b2338303837f4d9f2da68
 				<table border="1" cellpadding="5" cellspacing="0">
 					<tr>
 						<th>Nome</th>
