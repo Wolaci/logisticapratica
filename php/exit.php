@@ -74,13 +74,23 @@ span.psw {
        width: 100%;
     }
 }
+.produto b{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.ui table, h1{
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #f44336;
+}
+
 	</style>
+
 </head>
 <body>
 <form method="POST" action="/php/cadprod/exitPdo.php">
 	<div class="imgcontainer">
 	</div>
 	<div class="container">
+		<div class="produto">
 		<label for="uname"><b>Digite o código do Produto</b></label>
 		<input type="text" placeholder="Inserir codigo ou nome do produto" name="code" required>
 		<input type="number" placeholder="Inserir quantidade" name="quantities">
@@ -95,8 +105,8 @@ span.psw {
 	<table class="ui inverted table" style="text-align:center;">
 		<h1>Vendas</h1>
 		<tr>
-			<th>nome</th>
-			<th>quantidade</th>
+			<th>Nome</th>
+			<th>Quantidade</th>
 		</tr>
 		<?php
 	     $saida = $conn->prepare('SELECT * FROM Saida WHERE login =:l');
@@ -112,8 +122,10 @@ span.psw {
 			</tr>
 		<?php endwhile; ?>
 	</table>
-	<a href="/php/pdf/saida.php"><button type="submit"  class="container"> efetuar comprar</button></a>
+	<a href="/php/pdf/saida.php"><button type="submit"  class="container"> Efetuar Compra</button></a>
 	</div>
+	</div>
+
 	
 		
 

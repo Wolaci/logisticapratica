@@ -1,4 +1,4 @@
-<?php
+	<?php
 session_start();	
 if (isset($_SESSION['login'])) {
 	
@@ -52,7 +52,8 @@ if (isset($_SESSION['login'])) {
 
 
 		<div class="row">
-			<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">	
+			<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+				<div class="produto">	
 				<h2>Estoque</h2>
 				<table border="1" cellpadding="5" cellspacing="0">
 					<tr>
@@ -106,7 +107,7 @@ if (isset($_SESSION['login'])) {
 						</tr> 
 					<?php endwhile; ?>
 				</table>	
-				
+				</div>
 			</div>
 		</body>
 

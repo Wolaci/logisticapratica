@@ -1,4 +1,4 @@
-<?php
+    <?php
 session_start();
 require 'menu.php';
 include 'POO/Usuario.php';
@@ -72,6 +72,14 @@ $nameUs=$_SESSION['login'];
      }
      h1{}
  }
+ .estoque {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #f44336;
+ }
+ .produtos h1{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #f44336;
+ }
 </style>
 <title></title>
 </head>
@@ -81,25 +89,26 @@ $nameUs=$_SESSION['login'];
 <body>
 	<form action="/php/cadprod/addcomp.php" method="POST" >
        <div class="container">
+            <div class="produtos">
            <h1>Produtos</h1>
-           <input type="text" name="prod" required placeholder="digite o nome o do produto">
-           <input type="text" name="prod_cod" required placeholder="digite o codigo do produto">
+           <input type="text" name="prod" required placeholder="Digite o nome do produto">
+           <input type="text" name="prod_cod" required placeholder="Digite o código do produto">
            <h1>Componentes</h1>
-           <input type="text" name="comp" placeholder="digite o nome do componente ">
-           <input type="text" name="comp_cod" placeholder="digite o nome do componente">
-           <input type="text" name="quant_comp" placeholder="escolha a quantidade de componentes">
-           <button class="submit">enviar</button>
-
+           <input type="text" name="comp" placeholder="Digite o nome do componente ">
+           <input type="text" name="comp_cod" placeholder="Digite o nome do componente">
+           <input type="text" name="quant_comp" placeholder="Escolha a quantidade de componentes">
+           <button class="submit">Enviar</button>
+        </div>
        </div>
    </form>
 
     <div class="container">
-   <div><button id='produto'>ver seus produtos</button> 
+   <div><button id='produto'>Produtos</button> 
         <div>
               
         <div id="pjt" class="d-none">
             <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">    
-                <h2>Estoque</h2>
+                <h2 class="estoque">Estoque</h2>
                 <table border="1" cellpadding="5" cellspacing="0">
                     <tr>
                         <th>Nome</th>
@@ -161,12 +170,12 @@ $nameUs=$_SESSION['login'];
                 if (bol) {
 
                     p.className = "";
-                    prod.innerHTML= "desver seus produtos";
+                    prod.innerHTML= "Reduzir";
                     bol = false;
                 }else{
                     p.className="d-none";
                     bol = true;
-                    prod.innerHTML= "ver seus produtos";
+                    prod.innerHTML= "Produtos";
                 }
             }
         </script> 
