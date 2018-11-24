@@ -1,10 +1,15 @@
-    <?php
+<?php
 session_start();
 require 'menu.php';
 include 'POO/Usuario.php';
 $u = new Usuario();
 $u -> conectar();
 $nameUs=$_SESSION['login'];
+
+
+// $_comp=$conn->prepare('SELECT id,nome FROM produto_pdo WHERE fk_user=?');
+// $_comp->execute([$nameUs]);
+// $show=$_comp->fetch(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -72,14 +77,6 @@ $nameUs=$_SESSION['login'];
      }
      h1{}
  }
- .estoque {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color: #f44336;
- }
- .produtos h1{
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    color: #f44336;
- }
 </style>
 <title></title>
 </head>
@@ -87,97 +84,128 @@ $nameUs=$_SESSION['login'];
     <title></title>
 </head>
 <body>
-	<form action="/php/cadprod/addcomp.php" method="POST" >
-       <div class="container">
-            <div class="produtos">
-           <h1>Produtos</h1>
-           <input type="text" name="prod" required placeholder="Digite o nome do produto">
-           <input type="text" name="prod_cod" required placeholder="Digite o código do produto">
-           <h1>Componentes</h1>
-           <input type="text" name="comp" placeholder="Digite o nome do componente ">
-           <input type="text" name="comp_cod" placeholder="Digite o nome do componente">
-           <input type="text" name="quant_comp" placeholder="Escolha a quantidade de componentes">
-           <button class="submit">Enviar</button>
-        </div>
-       </div>
-   </form>
-
     <div class="container">
-   <div><button id='produto'>Produtos</button> 
-        <div>
-              
-        <div id="pjt" class="d-none">
-            <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">    
-                <h2 class="estoque">Estoque</h2>
-                <table border="1" cellpadding="5" cellspacing="0">
-                    <tr>
-                        <th>Nome</th>
-                        <th>Código</th>
-                        <th>Validade</th>
-                        <th>Chegada</th>
-                        <th>Lote</th>
-                        <th>Quantidade</th>
-                        <th>Excluir</th>
-                    </tr>
-                    <?php 
+        <form class="form-group">
+            <h1>Produtos</h1>
+            <p>Escolha o nome do seu produto</p>
+                <select class="form-control" id="exampleSelect1">
+            <?php foreach ($show as $see ) :?>
+                    <option value="<?=$see['id']?>"><?=$see['nome']?></option>
+            <?php endforeach ; ?> 
+                </select>
+
+            <h1>Componentes</h1>
+            <p>Escolha seu componente</p>
+                <select class="form-control" id="exampleSelect1">
+                     <?php foreach ($show as $see ) :?>
+                    <option value="<?=$see['id']?>"><?=$see['nome']?></option>
+                    <?php endforeach ; ?> 
+                </select>
+                </br>
+                <p>Escolha a quantidade de componentes</p>
+                     <input type="number" placeholder="Ex:10" class="form-control" id="exampleInputPassword1">
+        </form>
+
+            <div><button id='produto'>ver seus produtos</button> 
+                <div>
+                    <div >
+                        <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+                            <h2>Componentes do Produto</h2>
+                            <table border="1" cellpadding="5" cellspacing="0">
+                                <tr>
+                                    <td>Produto</td>
+                                    <td>Componente</td>
+                                    <td>quantidade</td>
+                                </tr>
+                            </table>
+                            <?php
+                            $_comp=$conn->prepare('SELECT produto_pdo.id,compoe.quantidade FROM produto_pdo JOIN compoe on produto_pdo.id = compoe.id_produto AND produto_pdo.id = compoe.id_componente WHERE fk_user=?');
+                            $_comp->execute([$_SESSION['login']]);
+                            while ($comprod=$_comp->fetch(PDO::FETCH_ASSOC)) : ?>
+
+                                <tr>
+                                    <td><?=$comprod['nome']?></td>
+                                    <td><?=$comprod['nome']?></td>
+                                    <td><?=$comprod['quantidade']?></td>
+                                </tr>
+
+                            <?php endwhile;  ?>
+                            ?>
+                        </div>
+                    </div>
+
+                    <div id="pjt" class="d-none">
+                        <div >    
+                            <h2>Estoque</h2>
+                            <table border="1" cellpadding="5" cellspacing="0" class="ui inverted table" style="text-align:center;">
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Código</th>
+                                    <th>Validade</th>
+                                    <th>Chegada</th>
+                                    <th>Lote</th>
+                                    <th>Quantidade</th>
+                                    <th>Excluir</th>
+                                </tr>
+                                <?php 
 
 
 
-                    $nomes=$conn->prepare('SELECT * FROM produto_pdo WHERE fk_user = :f');
-                    $nomes->bindValue(":f",$_SESSION['login']);
-                    $nomes->execute();
+                                $nomes=$conn->prepare('SELECT * FROM produto_pdo WHERE fk_user = :f');
+                                $nomes->bindValue(":f",$_SESSION['login']);
+                                $nomes->execute();
         // $res = $nomes->fetch(PDO::FETCH_ASSOC);
 
 
-                    while($res = $nomes->fetch(PDO::FETCH_ASSOC)):  
+                                while($res = $nomes->fetch(PDO::FETCH_ASSOC)):  
 
 
-                        ?>
-                        <tr>
-                            <td><?= $res['nome'] ?></td>
-                            <td><?=$res['codigo'] ?></td>
-                            <td><?=$res['validade']?></td>
-                            <td><?=$res['chegada']?></td>
-                            <td><?=$res['lote']?></td>
-                            <td><?=$res['quantidade']?></td>
-                            <td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img src="../img/excluir.png"></excluir></a></td>
-                            <td><?php 
+                                    ?>
+                                    <tr>
+                                        <td><?= $res['nome'] ?></td>
+                                        <td><?=$res['codigo'] ?></td>
+                                        <td><?=$res['validade']?></td>
+                                        <td><?=$res['chegada']?></td>
+                                        <td><?=$res['lote']?></td>
+                                        <td><?=$res['quantidade']?></td>
+                                        <td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img src="../img/excluir.png"></excluir></a></td>
+                                        <td><?php 
                             //$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f AND nome="$res[nome]" AND quantidade="0"');
-                            $alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = ? AND quantidade=?'); 
-                            $alert->bindValue(1,$_SESSION['login']);
-                            $alert->bindValue(2,$res['quantidade']);
-                            $alert->execute();
-                            $a=$alert->fetch();
-                            $b=$a[0];
-                            
+                                        $alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = ? AND quantidade=?'); 
+                                        $alert->bindValue(1,$_SESSION['login']);
+                                        $alert->bindValue(2,$res['quantidade']);
+                                        $alert->execute();
+                                        $a=$alert->fetch();
+                                        $b=$a[0];
 
-                            if($b<=0){
-                                echo "<img width='30px' height='30px' src='../img/alert.png'>";
+
+                                        if($b<=0){
+                                            echo "<img width='30px' height='30px' src='../img/alert.png'>";
+                                        }else{
+                                            echo "<img width='30px' height='30px' src='../img/okay.png'>";
+                                        } ?></td>
+                                    </tr> 
+                                <?php endwhile; ?>
+                            </table>
+                        </div>
+                    </div></div>
+                    <script type="text/javascript">
+                        var bol = true;
+                        var prod = document.getElementById('produto');
+                        var s = document.getElementById('show');
+                        var p = document.getElementById('pjt');
+                        prod.onclick= function () {
+                            if (bol) {
+
+                                p.className = "";
+                                prod.innerHTML= "desver seus produtos";
+                                bol = false;
                             }else{
-                                echo "<img width='30px' height='30px' src='../img/okay.png'>";
-                            } ?></td>
-                        </tr> 
-                    <?php endwhile; ?>
-                </table>
-            </div>
-        </div></div>
-        <script type="text/javascript">
-            var bol = true;
-            var prod = document.getElementById('produto');
-            var s = document.getElementById('show');
-            var p = document.getElementById('pjt');
-            prod.onclick= function () {
-                if (bol) {
-
-                    p.className = "";
-                    prod.innerHTML= "Reduzir";
-                    bol = false;
-                }else{
-                    p.className="d-none";
-                    bol = true;
-                    prod.innerHTML= "Produtos";
-                }
-            }
-        </script> 
-    </body>
-    </html>
+                                p.className="d-none";
+                                bol = true;
+                                prod.innerHTML= "ver seus produtos";
+                            }
+                        }
+                    </script> 
+                </body>
+                </html>
