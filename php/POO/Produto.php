@@ -11,30 +11,14 @@ class Produto {
 
 		$consulta->execute([$nome,$codigo,$validade,$chegada,$lote,$Usuario,$quant,$est]);
 	}
-	function returnIdProd($prod,$prodcod,$comp,$compcod,$quantcomp)
+	function returnIdProd($prod,$comp,$quantcomp)
 	{
-		global $conn;
 
-
-		$addProd=$conn->prepare('SELECT id,quantidade FROM produto_pdo WHERE nome = ? AND codigo = ?');
-		$addProd->execute([$prod,$prodcod]);
-
-		$addComp = $conn->prepare('SELECT id,quantidade FROM produto_pdo WHERE nome = ? AND codigo = ?');
-
-		$addComp->execute([$comp,$compcod,]);
-		$a = $addProd->fetch();
-		$b = $addComp->fetch();
-		if($b[1]>$quantcomp){
-			$_SESSION['quant_er']=true;
-			echo "foi";
-		}
-
-
-		if ($addProd->rowCount()>0 && $addComp->rowCount()>0) {
+      global $conn;
 			$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente,quantidade) 
 				VALUES (?,?,?)');
-			$compoe->execute([$a[0],$b[0],$quantcomp]);
-		}
+			$compoe->execute([$prod,$comp,$quantcomp]);
+		
 	}
 	function saida($code,$quant,$log){
 		global $conn;
