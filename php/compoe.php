@@ -15,6 +15,7 @@ $show=$_comp->fetchALL(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
     <style>
         body {color:white; font-family: Arial, Helvetica, sans-serif;}
 
@@ -97,14 +98,14 @@ $show=$_comp->fetchALL(PDO::FETCH_ASSOC);
            
                 <h1>Componentes</h1>
                 <p>Escolha seu componente</p>
-                <select name="comp"  class="form-control" id="exampleSelect1">
+                <select name="comp"      class="form-control" id="exampleSelect1">
                    <?php foreach ($show as $see ) :?>
                     <option  value="<?=$see['id']?>"><?=$see['nome']?></option>
                 <?php endforeach ; ?> 
             </select>
         </br>
         <p>Escolha a quantidade de componentes</p>
-        <input type="number" placeholder="Ex:10" name="quant">
+        <input class="form-control" type="number" placeholder="Ex:10" name="quant">
         <button type="submit">Compor Produtos</button>
 </form>
 
@@ -121,7 +122,7 @@ $show=$_comp->fetchALL(PDO::FETCH_ASSOC);
                     </tr>
                 </table>
                 <?php
-                $_comp=$conn->prepare('SELECT produto_pdo.id,compoe.quantidade FROM produto_pdo JOIN compoe on produto_pdo.id = compoe.id_produto AND produto_pdo.id = compoe.id_componente WHERE fk_user=?');
+                $_comp=$conn->prepare('SELECT');
                 $_comp->execute([$_SESSION['login']]);
                 while ($comprod=$_comp->fetch(PDO::FETCH_ASSOC)) : ?>
 

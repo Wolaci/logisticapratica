@@ -11,11 +11,11 @@ class Produto {
 
 		$consulta->execute([$nome,$codigo,$validade,$chegada,$lote,$Usuario,$quant,$est]);
 	}
-	function returnIdProd($prod,$comp,$quantcomp)
+	function returnIdProd($prod,$comp,$quantcomp,$log)
 	{
 
       global $conn;
-			$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente,quantidade) 
+			$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente,quantidade,user_comp) 
 				VALUES (?,?,?)');
 			$compoe->execute([$prod,$comp,$quantcomp]);
 		

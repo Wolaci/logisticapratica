@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include '../POO/Usuario.php';
 include '../POO/Produto.php';
 
@@ -7,16 +9,16 @@ include '../POO/Produto.php';
 // $comp=$_POST['comp'];
 // $compcod=$_POST['comp_cod'];
 // $quantcomp=$_POST['quant_comp'];
-$quantcomp=$_POST['quant'];
 $id_prod=$_POST['prod'];
 $id_comp=$_POST['comp'];
-
+$quantcomp=$_POST['quant'];
+$log = $_SESSION['login'];
 
 $u = new Usuario();
 $u -> conectar();
 
 $p = new Produto();
-$p->returnIdProd($id_prod,$id_comp,$quantcomp);
+$p->returnIdProd($id_prod,$id_comp,$quantcomp,$log);
 
 header('location: /php/compoe.php')
 ?>
