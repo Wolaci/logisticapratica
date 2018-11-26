@@ -7,9 +7,9 @@ $u -> conectar();
 $nameUs=$_SESSION['login'];
 
 
-// $_comp=$conn->prepare('SELECT id,nome FROM produto_pdo WHERE fk_user=?');
-// $_comp->execute([$nameUs]);
-// $show=$_comp->fetch(PDO::FETCH_ASSOC);
+ $_comp=$conn->prepare('SELECT id,nome FROM produto_pdo WHERE fk_user=?');
+ $_comp->execute([$nameUs]);
+$show=$_comp->fetch(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>

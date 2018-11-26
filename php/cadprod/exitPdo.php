@@ -1,9 +1,10 @@
 <?php
-
+session_start();
 include '../POO/Usuario.php';
 $log=$_SESSION['login'];
 $code= $_POST['code'];
 $quant=$_POST['quantities'];
+
 
 $u = new Usuario();
 $u->conectar();	
@@ -11,7 +12,7 @@ $u->conectar();
 include '../POO/Produto.php';
 
 $p = new Produto();
-$p->saida($code,$quant);
+$p->saida($code,$quant,$log);
 
 
 // global $conn;

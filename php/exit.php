@@ -86,7 +86,7 @@ span.psw {
 
 </head>
 <body>
-<form method="POST" action="/php/cadprod/exitPdo.php">
+<form method="POST" action="cadprod/exitPdo.php">
 	<div class="imgcontainer">
 	</div>
 	<div class="container">
@@ -94,7 +94,7 @@ span.psw {
 		<label for="uname"><b>Digite o código do Produto</b></label>
 		<input type="text" placeholder="Inserir codigo ou nome do produto" name="code" required>
 		<input type="number" placeholder="Inserir quantidade" name="quantities">
-		<button type="submit">Vender Produtos</button>		
+		<button type="submit" name="submit">Vender Produtos</button>		
 		<label>
 		</div>
 

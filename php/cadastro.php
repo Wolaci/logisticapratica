@@ -9,7 +9,10 @@ if (isset($_SESSION['login'])) {
 	require_once ('menu.php');
 }else{
 	header('location: /php/login/login.php');
-}			
+}	
+// $_email=$conn->('SELECT estoque FROM produto_pdo WHERE fk_user=?');
+// $_email->execute([$nameUS]);
+
 		
 ?>
 <body>
@@ -21,9 +24,7 @@ if (isset($_SESSION['login'])) {
 					<fieldset>
 
 					<form action="cadprod/addNome.php" method="POST">
-						<ul>
-						<p>Cadastre o Produto</p>
-						<input type="text" name="nome" placeholder="Digite o nome do Produto">
+						
 
 						<form action="cadprod/addNome.php" method="POST">
 							<ul>
@@ -131,15 +132,15 @@ if (isset($_SESSION['login'])) {
 						<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img src="../img/excluir.png"></excluir></a></td>
 						<td><?php 
 							//$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f AND nome="$res[nome]" AND quantidade="0"');
-							$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = ? AND quantidade=?'); 
+							$alert=$conn->prepare('SELECT quantidade,estoque FROM produto_pdo WHERE fk_user = ? AND quantidade=?'); 
 							$alert->bindValue(1,$nomeUs);
 							$alert->bindValue(2,$res['quantidade']);
 							$alert->execute();
 							$a=$alert->fetch();
 							$b=$a[0];
-							
+							$c=$a[1];
 
-							if($b<=0){
+							if($b<=$c){
 								echo "<img width='30px' height='30px' src='../img/alert.png'>";
 								}else{
 									echo "<img width='30px' height='30px' src='../img/okay.png'>";

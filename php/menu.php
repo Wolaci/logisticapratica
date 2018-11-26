@@ -99,22 +99,35 @@
 						<li class="nav-item">
 							<a class="btn btn-dark" href="/php/grupo.php">Quem Somos Nós</a>
 					<li class="nav-item dropdown">
-						<a class="btn btn-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" onclick="drop">Usuário</a>
-						<div id="drop" class="dropdown-menu">
+						<a class="btn btn-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" >Usuário</a>
+						<?php
+						if(!isset($_SESSION['login'])){
+						echo
+						'<div id="drop" class="dropdown-menu">
 							<a class="dropdown-item" href="/php/login/login.php">Login</a>
 							<a class="dropdown-item" href="/php/login/register.php">Cadastro</a>
-						</div>
-						<div class="dropdown-menu" id="dropI">
+						</div>';
+					}else{
+						echo
+						'<div class="dropdown-menu" id="dropI">
 							<a class="dropdown-item" href="/php/login/logout.php">Logout</a>
-						</li>
-						
-						<li class="nav-item dropdown">
+						</li>';
+					}
+						?>
+						<?php
+						if(isset($_SESSION['login'])){
+						echo
+							'<li class="nav-item dropdown">
 							<a class="btn btn-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" onclick="produto" >Produto</a>
 							<div class="dropdown-menu" id="prod">
 								<a class="dropdown-item" href="/php/cadastro.php">Cadastro de Produto</a>
 								<a class="dropdown-item" href="/php/exit.php">Saída de Produto</a>
+								<a class="dropdown-item" href="/php/listar.php">Listar Produtos</a>
+								<a class="dropdown-item" href="/php/compoe.php">Compor Produtos</a>
 							</div>
-						</li>
+						</li>';
+					}
+						?>
 					</ul>
     </div>
   </div>
