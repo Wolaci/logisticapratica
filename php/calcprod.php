@@ -87,7 +87,7 @@ $show=$seletaPro->fetchALL(PDO::FETCH_ASSOC);
 <h1>Calcular Produção</h1>
 	<fieldset>
 		<form class="form-group" method="POST" action="cadprod/calcula.php">
-			<select name="selProd"class="form-control" id="exampleSelect1" >
+			<select name="selProd" class="form-control" id="exampleSelect1" >
 				<?php foreach ($show as $see ) :?>
                     <option   value="<?=$see['id']?>"><?=$see['nome']?></option>
                 <?php endforeach ; ?> 
@@ -97,6 +97,6 @@ $show=$seletaPro->fetchALL(PDO::FETCH_ASSOC);
 	<button type="submit" >Calcular</button>
 		</form>
 	</fieldset>
-	</div>
+    </div>
 </body>
 </html>
