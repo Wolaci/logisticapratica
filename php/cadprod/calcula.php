@@ -12,9 +12,9 @@ var_dump($selec);
 
 if($selec){
 	//echo "oi";
-$selec=$conn->prepare('SELECT nome,quantidade FROM produto_pdo WHERE  nome=?');
-$selec->execute([$selProd]);
-$a = $selec->fetchALL();
+$select=$conn->prepare('SELECT nome,quantidade FROM produto_pdo WHERE  id=?');
+$select->execute([$selProd]);
+$a = $select->fetchALL();
 //echo $a[0];
 var_dump($a);
 }
