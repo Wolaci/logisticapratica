@@ -71,6 +71,16 @@ span.psw {
 
 <form action="../login/verlog.php" method="post">
 
+    <?php  
+   
+  if(isset($_SESSION['logErro'])){
+    echo '<div class="container" style="text-align:center; border:2px solid #f00;   background-color:rgba(255,0,0,0.6);">';
+    if (isset($_SESSION['erro'])) {
+      echo "login e/ou senha incorreto ";
+    }
+    echo '</div>';
+  }
+  ?>
 
   <div class="container">
     <label for="uname"><b>Usuário</b></label>
@@ -84,16 +94,6 @@ span.psw {
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
   </div> 
-    <?php  
-   
-  if(isset($_SESSION['logErro'])){
-    echo '<div class="container" style="text-align:center; border:2px solid #f00;   background-color:rgba(255,0,0,0.6);">';
-    if (isset($_SESSION['erro'])) {
-      echo "login e/ou senha incorreto ";
-    }
-    echo '</div>';
-  }
-  ?>
   <div class="container" style="background-color:#f1f1f1">
     <a href="../../index.php"><button type="button" class="cancelbtn">Cancelar</button></a>
     <span class="psw">Forgot <a href="#">password?</a></span>

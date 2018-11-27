@@ -97,6 +97,21 @@ $show=$seletaPro->fetchALL(PDO::FETCH_ASSOC);
 	<button type="submit" >Calcular</button>
 		</form>
 	</fieldset>
+    <div>
+        <table class="ui inverted table" style="text-align:center;">
+             <h2>produto</h2> 
+            <tr>
+                <td>componentes</td>
+                <td>quantidade</td>
+                <td>situação do seu estoque atual</td>
+            </tr>
+            <?php
+            $ver_prod=$conn->prepare('SELECT id_componente,quantidade
+             FROM compoe WHERE  id_produto = ?');
+            $ver_prod->execute([]); 
+            ?>
+        </table>
+    </div>
     </div>
 </body>
 </html>

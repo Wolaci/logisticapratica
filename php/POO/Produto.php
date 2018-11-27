@@ -16,8 +16,9 @@ class Produto {
 
       global $conn;
 			$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente,quantidade,user_comp) 
-				VALUES (?,?,?)');
-			$compoe->execute([$prod,$comp,$quantcomp]);
+				VALUES (?,?,?,?)');
+			$compoe->execute([$prod,$comp,$quantcomp,$log]);
+
 		
 	}
 	function saida($code,$quant,$log){

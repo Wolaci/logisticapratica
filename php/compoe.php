@@ -94,7 +94,11 @@ $show=$_comp->fetchALL(PDO::FETCH_ASSOC);
                     <option   value="<?=$see['id']?>"><?=$see['nome']?></option>
                 <?php endforeach ; ?> 
             </select>
-            
+           <?php if (isset($_SESSION[ver_c])) :?>
+            <?='<div class="container" style="text-align:center; border:2px solid #f00;   background-color:rgba(255,0,0,0.6);">' ?>
+            <?= 'componente já cadastrado a e esse produto' ?> 
+            <?='</div>' ?> 
+           <?php endif;?> 
            
                 <h1>Componentes</h1>
                 <p>Escolha seu componente</p>
@@ -105,14 +109,14 @@ $show=$_comp->fetchALL(PDO::FETCH_ASSOC);
             </select>
         </br>
         <p>Escolha a quantidade de componentes</p>
-        <input class="form-control" type="number" placeholder="Ex:10" name="quant">
+        <input class="form-control" type="number" placeholder="Ex:10" name="quant" min="1" >
         <button type="submit">Compor Produtos</button>
 </form>
 
 <div><button id='produto'>ver seus produtos</button> 
     <div>
         <div >
-            <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
+            
                 <h2>Componentes do Produto</h2>
                 <table class="ui inverted table" style="text-align:center;">
                     <tr>
@@ -120,19 +124,19 @@ $show=$_comp->fetchALL(PDO::FETCH_ASSOC);
                         <td>Componente</td>
                         <td>quantidade</td>
                     </tr>
-                </table>
                 <?php
-                $_comp=$conn->prepare('SELECT');
-                $_comp->execute([$_SESSION['login']]);
+                $_comp=$conn->prepare('SELECT * FROM compoe WHERE user_comp = ?');
+                $_comp->execute([$nameUs]);
                 while ($comprod=$_comp->fetch(PDO::FETCH_ASSOC)) : ?>
 
                 <tr>
-                    <td><?=$comprod['nome']?></td>
-                    <td><?=$comprod['nome']?></td>
+                    <td><?=$comprod['id_produto']?></td>
+                    <td><?=$comprod['id_componente']?></td>
                     <td><?=$comprod['quantidade']?></td>
                 </tr>
 
             <?php endwhile;  ?>
+                </table>
 
         </div>
     </div>
