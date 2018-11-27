@@ -7,6 +7,7 @@ $login=$_SESSION['login'];
 include 'POO/Usuario.php';
 $u = new Usuario();
 $u->conectar();
+$id=$_GET['id'];
 
 ?>
 <!DOCTYPE html>
@@ -92,8 +93,8 @@ span.psw {
 	<div class="container">
 		<div class="produto">
 		<label for="uname"><b>Digite o código do Produto</b></label>
-		<input type="text" placeholder="Inserir codigo ou nome do produto" name="code" required>
-		<input type="number" placeholder="Inserir quantidade" name="quantities">
+		<input type="text" placeholder="Inserir " name="code" required>
+		<input type="number" placeholder="Inserir quantidade" name="quantities" value="$id">
 		<button type="submit" name="submit">Vender Produtos</button>		
 		<label>
 		</div>

@@ -1,17 +1,16 @@
 <?php
 
-	//include 'conexao.php';
+
 include '../POO/Usuario.php';
-	$u = new Usuario();
-	$u->conectar();
-	
-	$id = $_GET['id'];
+$u = new Usuario();
+$u->conectar();
 
-	$apagar = $conn->prepare("DELETE FROM produto_pdo  WHERE id = $id");
-	$apagar->execute();
+$id = $_GET['id'];
 
-	header('location:/php/cadastro.php');
+$apagar = $conn->prepare("DELETE FROM produto_pdo  WHERE id = $id");
+$apagar->execute();
+
+header('location:/php/cadastro.php');
 
 ?>
 
-     

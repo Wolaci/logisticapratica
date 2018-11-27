@@ -1,14 +1,15 @@
 <?php
 session_start();
 require 'menu.php';
-include 'POO/Usuario.php';
-$u = new Usuario();
-$u -> conectar();
-$nameUs=$_SESSION['login'];
+// include 'POO/Usuario.php';
+// $u = new Usuario();
+// $u -> conectar();
+// $nameUs=$_SESSION['login'];
 
-$seletaPro=$conn->prepare('SELECT id,nome FROM produto_pdo WHERE fk_user=?');
-$seletaPro->execute([$nameUs]);
-$show=$seletaPro->fetchALL(PDO::FETCH_ASSOC);
+// $seletaPro=$conn->prepare('SELECT id,nome FROM produto_pdo WHERE fk_user=?');
+// $seletaPro->execute([$nameUs]);
+// $show=$seletaPro->fetchALL(PDO::FETCH_ASSOC);
+
 
 ?>
 <!DOCTYPE html>
@@ -97,21 +98,7 @@ $show=$seletaPro->fetchALL(PDO::FETCH_ASSOC);
 	<button type="submit" >Calcular</button>
 		</form>
 	</fieldset>
-    <div>
-        <table class="ui inverted table" style="text-align:center;">
-             <h2>produto</h2> 
-            <tr>
-                <td>componentes</td>
-                <td>quantidade</td>
-                <td>situação do seu estoque atual</td>
-            </tr>
-            <?php
-            $ver_prod=$conn->prepare('SELECT id_componente,quantidade
-             FROM compoe WHERE  id_produto = ?');
-            $ver_prod->execute([]); 
-            ?>
-        </table>
-    </div>
+  
     </div>
 </body>
 </html>
