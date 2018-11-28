@@ -7,7 +7,7 @@ $login=$_SESSION['login'];
 include 'POO/Usuario.php';
 $u = new Usuario();
 $u->conectar();
-$id=$_GET['id'];
+$id=$_GET['id'] ?? "";
 
 ?>
 <!DOCTYPE html>
