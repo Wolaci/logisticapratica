@@ -8,7 +8,7 @@ require 'menu.php';
 
 // $seletaPro=$conn->prepare('SELECT id,nome FROM produto_pdo WHERE fk_user=?');
 // $seletaPro->execute([$nameUs]);
-// $show=$seletaPro->fetchALL(PDO::FETCH_ASSOC);
+// $show=$seletaPro->fetchALL(PDO::FETCH_ASSOC) ?? " ";
 
 
 ?>

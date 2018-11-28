@@ -113,6 +113,7 @@ if (isset($_SESSION['login'])) {
 						<td><?=$res['quantidade']?></td>
 						<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>">
 						<img src="../img/excluir.png"></excluir></a></td>
+						<td><a href="/php/exit.php?id=<?= $res['id'] ?>"">oi</a></td>
 						<td><a href="/php/cadprod/altNome.php?id=<?= $res['id'] ?>"> <img src="../img/up.jpg" width="30px" height="30px"></a></td>
 						<td><a href="/php/exit.php/exit.php?id=<?= $res['id'] ?>">oi</a></td>
 						<td><?php 
