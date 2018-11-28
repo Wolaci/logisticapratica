@@ -112,8 +112,6 @@ $show=$_comp->fetchALL(PDO::FETCH_ASSOC);
         <input class="form-control" type="number" placeholder="Ex:10" name="quant" min="1" >
         <button type="submit">Compor Produtos</button>
 </form>
-
-<div><button id='produto'>ver seus produtos</button> 
     <div>
         <div >
             

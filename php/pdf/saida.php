@@ -109,6 +109,12 @@ ob_start();
 				<td>2.0</td>
 				<td>R$0,66</td>
 			</tr>
+			<?php foreach ($_saida as $list) : ?>
+				<tr>
+					<td><?= $list['nome']?><td><td><?=$list['quantidade']?></td>
+				</tr>
+
+			<?php endforeach ?>
 		</tbody>
 		<tfoot>
 			<tr class="sup ttu p--0">
@@ -164,17 +170,13 @@ ob_start();
 				</td>
 			</tr>
 		</tfoot>
-		<?php foreach ($_saida as $list) : ?>
-			<tr>
-				<td><?= $list['nome']?><td><td><?=$list['quantidade']?></td>
-			</tr>
-
-		<?php endforeach ?>
+		
 	</table>
 </body>
 </html>
 <?php
-$html=ob_get_contents();
+$html=ob_get_clean();
+
 require_once 'vendor/autoload.php';
 use Dompdf\Dompdf;
 //instancia o DOMPDF

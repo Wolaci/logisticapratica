@@ -108,8 +108,19 @@ $show=$seletaPro->fetchALL(PDO::FETCH_ASSOC);
             <?php
             $ver_prod=$conn->prepare('SELECT id_componente,quantidade
              FROM compoe WHERE  id_produto = ?');
-            $ver_prod->execute([]); 
+            $ver_prod->execute([$_SESSION['calc']]); 
+            $a=$ver_prod->fetchALL(PDO::FETCH_ASSOC);
+            $b=$ver_prod->fetchALL();
+            
+
             ?>
+            <?php foreach ($a as $see ) : ?>
+                <tr>
+            <td><?=$see['id_componente']?></td>
+            <td><?=$see['quantidade']*$_SESSION[mul]?></td>
+            <td></td>
+            </tr>
+            <?php endforeach ;?>
         </table>
     </div>
     </div>
