@@ -7,8 +7,8 @@ $u->conectar();
 
 $id = $_GET['id'];
 
-$apagar = $conn->prepare("DELETE FROM produto_pdo  WHERE id = $id");
-$apagar->execute();
+$apagar = $conn->prepare("DELETE FROM produto_pdo  WHERE id = ? ");
+$apagar->execute([$id]);
 
 header('location:/php/cadastro.php');
 

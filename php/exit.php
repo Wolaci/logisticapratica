@@ -8,7 +8,7 @@ include 'POO/Usuario.php';
 $u = new Usuario();
 $u->conectar();
 
-$cod=$_GET['cod'] ?? "";
+$cod=$_GET['cod'] ?? " ";
 
 
 ?>
@@ -96,7 +96,7 @@ span.psw {
 		<div class="produto">
 		<label for="uname"><b>Digite o código do Produto</b></label>
 
-		<input type="text" placeholder="Inserir codigo ou nome do produto" value="<?=$cod?>" name="code" required>
+		<input type="text" placeholder="Inserir codigo ou nome do produto" value="<?=$cod?>" name="code" >
 		<input type="number" placeholder="Inserir quantidade" name="quantities">
 
 		<button type="submit" name="submit">Vender Produtos</button>		
@@ -127,7 +127,9 @@ span.psw {
 			</tr>
 		<?php endwhile; ?>
 	</table>
-	<a href="/php/pdf/saida.php"><button type="submit"  class="container"> Efetuar Compra</button></a>
+
+	<a href="/php/pdf/saida.php" ><button>efetuar compra</button></a>
+
 	</div>
 	</div>
 

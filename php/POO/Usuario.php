@@ -26,6 +26,7 @@ class Usuario
 
 		if($stmt->rowCount()>0){
 			$_SESSION['login'] = $_POST['login']; 
+			
 			header('Location: /php/cadastro.php');
 			
 		}else{

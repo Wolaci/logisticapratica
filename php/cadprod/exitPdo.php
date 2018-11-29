@@ -14,6 +14,20 @@ include '../POO/Produto.php';
 $p = new Produto();
 $p->saida($code,$quant,$log);
 
+// $stmt=$conn->prepare('SELECT quantidade,estoque,mail_forn FROM produto_pdo WHERE fk_user=? and codigo=?');
+// $stmt->execute([$log,$code]);
+
+// $test=$stmt->fetch();
+// var_dump($test);
+// if ($test[0]<=$test[1]) {
+// 	$envio=$conn->prepare('SELECT mail.email FROM mail JOIN produto_pdo ON id_mail=?');
+// 	$envio->execute([$test[2]]);
+// 	$env=$envio->fetch();
+	
+// 	$_SESSION['envio']=$env[0];
+// 	header('location: /php/mail/Mail/email.php');
+// }
+
 
 // global $conn;
 
@@ -30,6 +44,6 @@ $p->saida($code,$quant,$log);
 
 
 
-header('location:/php/exit.php');
+//header('location:/php/exit.php');
 
 ?>

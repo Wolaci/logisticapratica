@@ -5,6 +5,11 @@ require 'vendor/autoload.php';
 function email($email, $nome){
 $data = date('d/m/y');
 $mail = new PHPMailer;
+
+$a =$_SESSION['envio'];
+var_dump($a);
+
+
 //Aqui é a call do bozo, onde você decide qual protocolo vai usar, se é pop3 etc..
 $mail->isSMTP();
 //Aqui é onde os erros vão ficar evidentes
@@ -23,7 +28,7 @@ $mail->SMTPAuth = true;
 //Email de quem vai enviar 
 $mail->Username = "raulbarrosmr@gmail.com";
 //Senha do email a cima  kkk
-$mail->Password = "";
+$mail->Password = "131100rdsb";
 //Definir Formato de escrita
 $mail->CharSet = 'UTF-8';
 //Aqui a gente coloca realmente o titulo e o email de quem está enviando
@@ -33,7 +38,7 @@ $mail->addReplyTo('raulbarrosmr@gmail.com', 'Logística Prática');
 //Atenção, aqui é aonde o email e o nome dos usuários ficaram
 $mail->addAddress($email, $nome);
 //Corpo, oq vai ter dentro da caixa de email
-$mail->Subject = "Olá, ".$nome." Quer aprender sub-rede?".$data;
+$mail->Subject = "Olá pegou essa merda, ".$nome." Quer aprender sub-rede?".$data;
 $mail->IsHTML(true);
 //Aqui a gente coloca um html básico para envio
 $mail->msgHTML(file_get_contents('emailTeste.php'), dirname(__FILE__));
@@ -49,7 +54,7 @@ $mail->addAttachment('Mail.zip');
 
 	}
 }
-$email = 'libnarodrigues723@gmail.com';
 $nome = '1 Período - Tarde - 2018';
-email($email, $nome);
+
+email($a, $nome);
  ?>

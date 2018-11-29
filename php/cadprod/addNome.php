@@ -14,6 +14,7 @@
 	$lote =$_POST['lote'];
 	$quant=$_POST['quant'];
 	$estoque=$_POST['estoque'];
+	//$mail_forn=$_POST['mail_forn'];
 
 
   include '../POO/Produto.php';

@@ -10,9 +10,9 @@ if (isset($_SESSION['login'])) {
 }else{
 	header('location: /php/login/login.php');
 }	
-$_email=$conn->prepare('SELECT * FROM email');
+$_email=$conn->prepare('SELECT * FROM mail');
 $_email->execute();
-$_ema=$_email->fetchALL();
+$_ema=$_email->fetchALL(PDO::FETCH_ASSOC);
 
 		
 ?>
@@ -52,9 +52,13 @@ $_ema=$_email->fetchALL();
 
 								Estoque de segurança: 
 								<input type="number" name="estoque" placeholder="Estoque de segurança" required></br>
-								Email do fornecedor:
-								<input type="email" name="email" required>
-
+							<!-- 	Email do fornecedor:
+								<select name="mail_forn" >
+								<?php foreach($_ema as $email) :?>
+									<option value="<?=$email['id_mail']?>" ><?=$email['email']?></option>
+								<?php endforeach; ?>
+								</select>
+ -->
 							</div>
 							<input class="botao_cadastro" type="submit" value="Cadastrar no Sistema">
 						</ul>
