@@ -21,15 +21,15 @@ $mail->SMTPSecure = 'tls';
 //verificação se o email é válido mesmo
 $mail->SMTPAuth = true;
 //Email de quem vai enviar 
-$mail->Username = "";
+$mail->Username = "raulbarrosmr@gmail.com";
 //Senha do email a cima  kkk
 $mail->Password = "";
 //Definir Formato de escrita
 $mail->CharSet = 'UTF-8';
 //Aqui a gente coloca realmente o titulo e o email de quem está enviando
-$mail->setFrom('monitoriadigitalsuporte@gmail.com', 'Monitoria Digital Suporte');
+$mail->setFrom('raulbarrosmr@gmail.com', 'Logística Prática');
 //Aqui já é no caso se a pessoa tiver outro email pra enviar.
-$mail->addReplyTo('monitoriadigitalsuporte@gmail.com', 'Monitoria Digital Suporte');
+$mail->addReplyTo('raulbarrosmr@gmail.com', 'Logística Prática');
 //Atenção, aqui é aonde o email e o nome dos usuários ficaram
 $mail->addAddress($email, $nome);
 //Corpo, oq vai ter dentro da caixa de email

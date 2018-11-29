@@ -10,8 +10,9 @@ if (isset($_SESSION['login'])) {
 }else{
 	header('location: /php/login/login.php');
 }	
-// $_email=$conn->('SELECT estoque FROM produto_pdo WHERE fk_user=?');
-// $_email->execute([$nameUS]);
+$_email=$conn->prepare('SELECT * FROM email');
+$_email->execute();
+$_ema=$_email->fetchALL();
 
 		
 ?>
@@ -51,6 +52,8 @@ if (isset($_SESSION['login'])) {
 
 								Estoque de segurança: 
 								<input type="number" name="estoque" placeholder="Estoque de segurança" required></br>
+								Email do fornecedor:
+								<input type="email" name="email" required>
 
 							</div>
 							<input class="botao_cadastro" type="submit" value="Cadastrar no Sistema">
@@ -118,7 +121,7 @@ if (isset($_SESSION['login'])) {
 							$c=$a[1];
 
 							if($b<=$c){
-								echo "<img width='30px' height='30px' src='../img/alert.png'>";
+								echo "<a href='/php/cadmail.php' ><img width='30px' height='30px' src='../img/alert.png'></a>";
 								}else{
 									echo "<img width='30px' height='30px' src='../img/okay.png'>";
 									} ?>
