@@ -13,11 +13,21 @@ class Produto {
 	}
 	function returnIdProd($prod,$comp,$quantcomp,$log)
 	{
+		
+		session_start();
+		global $conn;
+		$ver=$conn->prepare('SELECT * FROM compoe WHERE id_produto =? AND id_componente =? ');
+		$ver->execute([$prod,$comp]);
+		if ($ver->rowCount()>0) {
+	
+			header('location: /php/compoe.php');
+		}else{
+ 		
 
-      global $conn;
-			$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente,quantidade,user_comp) 
-				VALUES (?,?,?,?)');
-			$compoe->execute([$prod,$comp,$quantcomp,$log]);
+		$compoe = $conn->prepare('INSERT INTO compoe(id_produto,id_componente,quantidade,user_comp) 
+			VALUES (?,?,?,?)');
+		$compoe->execute([$prod,$comp,$quantcomp,$log]);
+	}
 
 		
 	}
