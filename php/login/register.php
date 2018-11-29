@@ -79,19 +79,6 @@ span.psw {
 </style>
 </head>
 <body>
-<form method="POST" action="vercad.php">
-  <div class="container">
-    <label for="us"><b>Usuário</b></label>
-    <input type="text" placeholder="Novo Nome" name="us" required>
-
-    <label for="pw1"><b>Senha</b></label>
-    <input type="password" placeholder="Nova Senha" name="pw1" required>
-
-    <label for="pw2"><b>Confirmar Senha</b></label>
-    <input type="password" placeholder="Confirmar Senha" name="pw2" required>
-
-    <button type="submit">Cadastrar</button>
-  </div>
   <?php
   if (isset($_SESSION['cadEx'])) {
     echo '<div class="container" style="text-align:center; border:2px solid #0f0;   background-color:rgba(0,255,0,0.3);">';
@@ -115,6 +102,19 @@ span.psw {
      echo '</div>';
    } 
    ?>
+<form method="POST" action="vercad.php">
+  <div class="container">
+    <label for="us"><b>Usuário</b></label>
+    <input type="text" placeholder="Novo Nome" name="us" required>
+
+    <label for="pw1"><b>Senha</b></label>
+    <input type="password" placeholder="Nova Senha" name="pw1" required>
+
+    <label for="pw2"><b>Confirmar Senha</b></label>
+    <input type="password" placeholder="Confirmar Senha" name="pw2" required>
+
+    <button type="submit">Cadastrar</button>
+  </div>
 
   <div class="container" style="background-color:#f1f1f1">
     <a href="login.php"><button type="button" class="cancelbtn">Entrar</button></a>

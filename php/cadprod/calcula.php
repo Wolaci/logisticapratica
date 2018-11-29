@@ -4,8 +4,8 @@ include '../POO/Usuario.php';
 $u = new Usuario();
 $u->conectar();
 
-$_SESSION['calc'] = $_POST['selProd'] ?? " " ;
-$_SESSION['mul'] = $_POST['quantProdt'] ?? " "; 
+$_SESSION['calc'] = $_POST['selProd'] ?? "" ;
+$_SESSION['mul'] = $_POST['quantProdt'] ?? ""; 
 
 
 
