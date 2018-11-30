@@ -10,9 +10,11 @@
 	$cod = $_POST['cod'];
 	$lot = $_POST['lot'];
 	$val = $_POST['validade'];
+	$che = $_POST['chegada'];
+	$quant = $_POST['quantidade'];
 	$id = $_POST['id'];
-	$ce = $conn->prepare("UPDATE produto_pdo Set nome= ? ,codigo= ? ,lote= ? ,validade= ? WHERE id = ?");
-	$ce->execute([$nome,$cod,$lot,$val,$id]);
+	$ce = $conn->prepare("UPDATE produto_pdo Set nome= ? ,codigo= ? ,lote= ? ,validade= ? ,chegada = ? ,quantidade = ? WHERE id = ?");
+	$ce->execute([$nome,$cod,$lot,$val,$che,$quant,$id]);
 
 	header('location:../listar.php');
 ?>

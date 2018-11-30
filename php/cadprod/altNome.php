@@ -84,7 +84,9 @@ $nameUs=$_SESSION['login'];
         <input class="form-group" type="text" name="nome"  placeholder="Produto">
         <input  class="form-group" type="text" name="cod" placeholder="codigo">
         <input type="date" name="validade">
+        <input type="date" name="chegada">
         <input  class="form-group" type="text" name="lot" placeholder="lote">
+        <input class ="form-group" type="number" name="quantidade" placeholder="quantidade">
          <input type="hidden" name="id" value="<?= $id ?>">
         <button type="submit">alterar</button>
     </form>
