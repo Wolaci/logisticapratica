@@ -82,6 +82,9 @@ $nameUs=$_SESSION['login'];
 <fieldset>
     <form action="GravaEdita.php" method="post">
         <input class="form-group" type="text" name="nome"  placeholder="Produto">
+        <input  class="form-group" type="text" name="cod" placeholder="codigo">
+        <input type="date" name="validade">
+        <input  class="form-group" type="text" name="lot" placeholder="lote">
          <input type="hidden" name="id" value="<?= $id ?>">
         <button type="submit">alterar</button>
     </form>
