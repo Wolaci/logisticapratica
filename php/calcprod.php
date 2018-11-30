@@ -98,7 +98,7 @@
         <button type="submit" >Calcular</button>
     </form>
 </fieldset>
-<?php if(null !==($_SESSION['calc'] && $_SESSION['mul'])) : ?>
+<?php if( isset($_SESSION['calc']) && isset($_SESSION['mul'])) : ?>
     <?php
     $_mul=$conn->prepare('SELECT produto_pdo.quantidade,produto_pdo.nome,compoe.quantidade FROM produto_pdo JOIN compoe ON produto_pdo.id=compoe.id_componente where user_comp=?');
     $_mul->execute([$nameUs]);
