@@ -7,10 +7,12 @@ $login=$_SESSION['login'];
 include 'POO/Usuario.php';
 $u = new Usuario();
 $u->conectar();
-
+$nameUs=$_SESSION['login'];
 $cod=$_GET['cod'] ?? " ";
 
-
+$_cod=$conn->prepare('SELECT id,nome FROM produto_pdo WHERE fk_user=?');
+$_cod->execute([$nameUs]);
+$show=$_cod->fetchALL(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
@@ -94,9 +96,14 @@ span.psw {
 	</div>
 	<div class="container">
 		<div class="produto">
-		<label for="uname"><b>Digite o código do Produto</b></label>
+		<label for="uname"><b>Escolha o Produto</b></label>
 
-		<input type="text" placeholder="Inserir codigo ou nome do produto" value="<?=$cod?>" name="code" >
+		<!--input type="text" placeholder="Inserir codigo ou nome do produto" value="<?=$cod?>" name="code" -->
+		 <select name="code" class="form-control" >
+		<?php foreach ($show as $see ) :?>
+                    <option   value="<?=$see['nome']?>"><?=$see['nome']?></option>
+                <?php endforeach ; ?> 
+         </select>  
 		<input type="number" placeholder="Inserir quantidade" name="quantities">
 
 		<button type="submit" name="submit">Vender Produtos</button>		

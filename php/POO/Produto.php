@@ -34,16 +34,17 @@ class Produto {
 	function saida($code,$quant,$log){
 		global $conn;
 
-		$vender = $conn->prepare("SELECT nome,quantidade FROM produto_pdo  WHERE codigo = ? AND fk_user=?");
+		$vender = $conn->prepare("SELECT nome,quantidade FROM produto_pdo  WHERE nome = ? AND fk_user=?");
 		$vender->execute([$code,$log]); 
 		$adc=$vender->fetch();
+		$nome=$adc[0];
 		$soma=$adc[1]-$quant;
 
-		$adicionar=$conn->prepare('UPDATE produto_pdo SET quantidade = ? WHERE codigo = ?  ');
+		$adicionar=$conn->prepare('UPDATE produto_pdo SET quantidade = ? WHERE nome = ?  ');
 		$adicionar->execute([$soma,$code]);
 
 		$saidaE= $conn->prepare('INSERT INTO Saida(nome,login,quantidade) VALUES (?,?,?) ');
-		$saidaE->execute([$adc[0],$log,$quant]);
+		$saidaE->execute([$nome,$log,$quant]);
 	}
 }
 

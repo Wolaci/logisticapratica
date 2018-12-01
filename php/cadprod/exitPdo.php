@@ -5,6 +5,7 @@ $log=$_SESSION['login'];
 $code= $_POST['code'];
 $quant=$_POST['quantities'];
 
+if($code){
 
 $u = new Usuario();
 $u->conectar();	
@@ -13,6 +14,7 @@ include '../POO/Produto.php';
 
 $p = new Produto();
 $p->saida($code,$quant,$log);
+}
 
 // $stmt=$conn->prepare('SELECT quantidade,estoque,mail_forn FROM produto_pdo WHERE fk_user=? and codigo=?');
 // $stmt->execute([$log,$code]);
@@ -44,6 +46,6 @@ $p->saida($code,$quant,$log);
 
 
 
-//header('location:/php/exit.php');
+header('location:/php/exit.php');
 
 ?>

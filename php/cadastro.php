@@ -30,28 +30,28 @@ $_ema=$_email->fetchALL(PDO::FETCH_ASSOC);
 						<form action="cadprod/addNome.php" method="POST">
 							<ul>
 
-								Nome do Produto: 
-								<input type="text" name="nome" placeholder="Digite o nome do Produto"></br>
-								Código do Produto: 
-								<input type="text" name="codigo" placeholder="Digite o codigo do Produto"></br>
+								<p>Nome do Produto: 
+								<input type="text" name="nome" placeholder="Digite o nome do Produto"></p>
+								<p>Código do Produto: 
+								<input type="text" name="codigo" placeholder="Digite o codigo do Produto"></p>
 
 
 
-								Data da Chegada:
-								<input type="date" name="chegada" placeholder="dd/mm/aaaa"></br>
+								<p>Data da Chegada:
+								<input type="date" name="chegada" placeholder="dd/mm/aaaa"></p>
 
-								Validade:
-								<input type="date" name="validade" placeholder="dd/mm/aaaa"></br>
+								<p>Validade:
+								<input type="date" name="validade" placeholder="dd/mm/aaaa"></p>
 
 
-								lote do Produto:
-								<input type="text" name="lote" placeholder="Digite o lote"></br>
+								<p>lote do Produto:
+								<input type="text" name="lote" placeholder="Digite o lote"></p>
 
-								Quantidade: 
-								<input type="number" name="quant" placeholder="Escolha a quantidade" required></br>
+								<p>Quantidade: 
+								<input type="number" name="quant" placeholder="Escolha a quantidade" required></p>
 
-								Estoque de segurança: 
-								<input type="number" name="estoque" placeholder="Estoque de segurança" required></br>
+								<p>Estoque de segurança: 
+								<input type="number" name="estoque" placeholder="Estoque de segurança" required></p>
 							<!-- 	Email do fornecedor:
 								<select name="mail_forn" >
 								<?php foreach($_ema as $email) :?>
@@ -136,6 +136,7 @@ $_ema=$_email->fetchALL(PDO::FETCH_ASSOC);
 				</table>	
 				</div>
 			</div>
+			
 		</body>
 
 
