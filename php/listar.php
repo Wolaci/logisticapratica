@@ -19,6 +19,7 @@ $nomeUs=$_SESSION['login'];
 						<th>Chegada</th>
 						<th>Lote</th>
 						<th>Quantidade</th>
+						<th>Estoque de segurança</th>
 						<th>Excluir</th>
 						<th>update</th>
 						<th>Situaçao do produto</th>
@@ -44,21 +45,21 @@ $nomeUs=$_SESSION['login'];
 						<td><?=$res['chegada']?></td>
 						<td><?=$res['lote']?></td>
 						<td><?=$res['quantidade']?></td>
-						<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img src="../img/excluir.png"></excluir></a></td>
+						<td><?=$res['estoque']?></td>
+						<td><a href="/php/cadprod/rmNome.php?id=<?= $res['id'] ?>"><img height="30px" width="30lpx" src="../img/lixeiraNew.png"></excluir></a></td>
 						<td><a href="/php/cadprod/altNome.php?serio=<?= $res['id'] ?>"> <img src="../img/up.jpg" width="30px" height="30px"></a></td> 
 						
 						<td><?php 
-							//$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f AND nome="$res[nome]" AND quantidade="0"');
-							$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = ? AND quantidade=?'); 
+							$alert=$conn->prepare('SELECT quantidade,estoque FROM produto_pdo WHERE fk_user = ? AND quantidade=?'); 
 							$alert->bindValue(1,$nomeUs);
 							$alert->bindValue(2,$res['quantidade']);
 							$alert->execute();
 							$a=$alert->fetch();
 							$b=$a[0];
-							
+							$c=$a[1];
 
-							if($b<=0){
-								echo "<img width='30px' height='30px' src='../img/alert.png'>";
+							if($b<=$c){
+								echo "<a href='/php/cadmail.php' ><img width='30px' height='30px' src='../img/alert.png'></a>"," necessita de reposição";
 								}else{
 									echo "<img width='30px' height='30px' src='../img/okay.png'>";
 									} ?></td>
