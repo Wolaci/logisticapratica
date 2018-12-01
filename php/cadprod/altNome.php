@@ -74,11 +74,12 @@ $nameUs=$_SESSION['login'];
            }
            h1{}
        }
-   </style>4
+   </style>
     </style>
 </head>
 <body>
 <div class="container">
+
 <fieldset>
     <form action="GravaEdita.php" method="post">
         <input class="form-group" type="text" name="nome"  placeholder="Produto">
