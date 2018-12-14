@@ -78,14 +78,14 @@
                .cancelbtn {
                    width: 100%;
                }
-               h1{}
+           
            }
        </style>
    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Calcular Produção</h1>
+        <h1 style="color: white; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Calcular Produção</h1>
         <fieldset>
           <form class="form-group" method="POST" action="cadprod/calcula.php">
            <select name="selProd" class="form-control" id="exampleSelect1" >

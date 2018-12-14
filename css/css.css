@@ -21,8 +21,8 @@
     width: 60%;
     margin-top: 27.1%;
 }
-.produto h2 {
-	color: #f44336;
+.produto h1 {
+	color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .produto input{
@@ -49,6 +49,20 @@
     color: white;
 }
 .produto table, tr, th{
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+/*.produto label{
+    font-size: .85em;
+font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+color: red;
+}*/
+.produto input{
+      display: flex;
+      aling-items: center;
+      justify-content: space-between;
+}
+.produto label{
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }

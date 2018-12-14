@@ -10,7 +10,7 @@ $nomeUs=$_SESSION['login'];
 <div class="row">
 			<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
 			<div class="produto">	
-				<h2>Estoque</h2>
+				<h1>Estoque</h1>
 				<table border="1" cellpadding="5" cellspacing="0">
 					<tr>
 						<th>Nome</th>
@@ -19,10 +19,10 @@ $nomeUs=$_SESSION['login'];
 						<th>Chegada</th>
 						<th>Lote</th>
 						<th>Quantidade</th>
-						<th>Estoque de segurança</th>
+						<th>Estoque de Segurança</th>
 						<th>Excluir</th>
-						<th>update</th>
-						<th>Situaçao do produto</th>
+						<th>Update</th>
+						<th>Situação do Produto</th>
 					</tr>
 					<?php 
 

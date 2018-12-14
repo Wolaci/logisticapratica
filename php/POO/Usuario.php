@@ -11,7 +11,7 @@ class Usuario
 	{
 		global $conn;
 		try {
-			$conn = new PDO("mysql:host=localhost;dbname=id7218638_logistica", 'root','junior150305');
+			$conn = new PDO("mysql:host=localhost;dbname=id7218638_logistica", 'root','ifpe');
 		} catch (PDOException $e) {
 			echo "Connection failed: " . $e->getMessage();
 		}

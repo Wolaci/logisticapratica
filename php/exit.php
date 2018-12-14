@@ -84,7 +84,7 @@ span.psw {
 }
 .ui table, h1{
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	color: #f44336;
+	color: white;
 }
 
 	</style>
