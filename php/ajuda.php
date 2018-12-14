@@ -34,5 +34,13 @@ require_once '../php/menu.php';
 		<h1>Vender Produtos</h1>
 		<p>Para vender seus produtos é necessário clicar no ícone que cotém moedas na coluna com nome "vendas", após isso é necessário apenas que você preencha os campos e venda seu produto.</p>
 		<img src="/img/coin.png">
+		<h1>Gerar relatório</h1>
+		<p>Para gerar relatório de vendas é necessário após venda que você clique em "efetuar compra"</p>
+		<h1>Listar Produtos</h1>
+		<p>Após clicar em "produto" você deve clicar na opção "listar produtos".</p>
+		<h1>Compor Produtos</h1>
+		<p>Para compor produtos você deve clicar em "produto" e depois clicar selecionar "compor produtos" e assim compor seu produto dizendo com que materiais seu produto é composto.</p>
+		<h1>Calcular produção</h1>
+		<p>Para calcular produção você deve clicar no botão produto e selecionar "calcular produção" e assim calcular a produção do seu produto. </p>
 		</div>
 </div>
