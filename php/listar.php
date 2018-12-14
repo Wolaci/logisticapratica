@@ -59,10 +59,11 @@ $nomeUs=$_SESSION['login'];
 							$c=$a[1];
 
 							if($b<=$c){
-								echo "<a href='/php/cadmail.php' ><img width='30px' height='30px' src='../img/alert.png'></a>"," necessita de reposição";
+								echo "<a href='/php/cadprod/repor_Estoque_Manual.php'><img width='30px' height='30px' src='../img/alert.png'></a>"," necessita de reposição";
 								}else{
 									echo "<img width='30px' height='30px' src='../img/okay.png'>";
 									} ?></td>
+						<td><a href="/php/cadprod/repor_Estoque_Manual.php?ish=<?=$res['nome']?>">adicionar com link</a></td>
 						</tr> 
 					<?php endwhile; ?>
 				</table>

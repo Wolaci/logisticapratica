@@ -117,7 +117,7 @@ span.psw {
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
-    <a href="login.php"><button type="button" class="cancelbtn">Entrar</button></a>
-    <button type="button" class="cancelbtn">Cancelar</button>
+    <a href="login.php"><button type="button" class="cancelbtn">Efetuar login</button></a>
+    <button type="button" class="cancelbtn">Cancelar Cadastro</button>
   </div>
 </form>

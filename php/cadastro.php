@@ -113,7 +113,7 @@ $_ema=$_email->fetchALL(PDO::FETCH_ASSOC);
 						<!-- <td><a href="/php/exit.php?id=<?= $res['id'] ?>"">oi</a></td> -->
 						 <!--<a href="/php/cadprod/altNome.php?id=<?= $res['id'] ?>"> <img src="../img/up.jpg" width="30px" height="30px"></a></td> 
 						-->
-						<td><a href="/php/exit.php?cod=<?=$res['codigo']?>"><img height="30px" width="30px" src="/img/coin.png"></a></td>
+						<td><a href="/php/exit.php?cod=<?=$res['nome']?>"><img height="30px" width="30px" src="/img/coin.png"></a></td>
 						<td><?php 
 							//$alert=$conn->prepare('SELECT quantidade FROM produto_pdo WHERE fk_user = :f AND nome="$res[nome]" AND quantidade="0"');
 							$alert=$conn->prepare('SELECT quantidade,estoque FROM produto_pdo WHERE fk_user = ? AND quantidade=?'); 
