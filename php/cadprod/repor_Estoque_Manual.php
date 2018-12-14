@@ -96,7 +96,7 @@ $show=$_comp->fetchALL(PDO::FETCH_ASSOC);
     </select></h1>-->
     <h1>Produto<input type="text" name="prodt" value=<?=$get?>></h1>
 	
-	<h1>adicione quantidade <input  class="form-group" type="number" name="quantidade" >></h1>	
+	<h1>adicione quantidade <input class="form-control" type="number" name="quantidade" placeholder="Digite uma Quantidade" min="1" ></h1>	
 	
 	<button type="submit">adicionar</button>
 	</form>

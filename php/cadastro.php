@@ -48,10 +48,10 @@ $_ema=$_email->fetchALL(PDO::FETCH_ASSOC);
 								<input type="text" name="lote" placeholder="Digite o lote"></p>
 
 								<p>Quantidade: 
-								<input type="number" name="quant" placeholder="Escolha a quantidade" required></p>
+								<input min="1" type="number" name="quant" placeholder="Escolha a quantidade" required></p>
 
 								<p>Estoque de segurança: 
-								<input type="number" name="estoque" placeholder="Estoque de segurança" required></p>
+								<input min="1" type="number" name="estoque" placeholder="Estoque de segurança" required></p>
 							<!-- 	Email do fornecedor:
 								<select name="mail_forn" >
 								<?php foreach($_ema as $email) :?>
@@ -70,7 +70,6 @@ $_ema=$_email->fetchALL(PDO::FETCH_ASSOC);
 <div class="row">
 		
 
-		<div class="row">
 			<div class="col-lg-12 col-md-6 col-sm-12 col-xs-12">
 				<div class="produto">	
 				<h2>Estoque</h2>

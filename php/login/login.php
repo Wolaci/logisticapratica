@@ -68,9 +68,7 @@ span.psw {
     }
 }
 </style>
-
 <form action="../login/verlog.php" method="post">
-
     <?php  
    
   if(isset($_SESSION['logErro'])){
@@ -81,22 +79,12 @@ span.psw {
     echo '</div>';
   }
   ?>
-
   <div class="container">
-    <label for="uname"><b>Usuário</b></label>
-    <input type="text" placeholder="Ex: Luiz Inácio Lula da Silva" name="login" required>
-
-    <label for="psw"><b>Senha</b></label>
-    <input type="password" placeholder="Ex: ********" name="senha" required>
-        
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div> 
-  <div class="container" style="background-color:#f1f1f1">
-    <a href="../../index.php"><button type="button" class="cancelbtn">Cancelar Login</button></a>
-    <span class="psw">Forgot <a href="#">password?</a></span>
+       <label for="uname"><b>Usuário</b></label>
+         <input type="text" placeholder="Ex: Luiz Inácio Lula da Silva" name="login" required>
+       <label for="psw"><b>Senha</b></label>
+         <input type="password" placeholder="Ex: ********" name="senha" required>
+         <button type="submit">Login</button>
   </div>
 </form>
 

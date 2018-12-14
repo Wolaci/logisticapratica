@@ -63,7 +63,7 @@
 							<a class="btn btn-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" >Produto</a>
 							<div class="dropdown-menu" id="prod">
 								<a class="dropdown-item" href="/php/cadastro.php">Cadastro de Produto</a>
-								<a class="dropdown-item" href="/php/exit.php">Saída de Produto</a>
+								<a class="dropdown-item" href="/php/exit.php">Vendas de Produto</a>
 								<a class="dropdown-item" href="/php/listar.php">Listar Produtos</a>
 								<a class="dropdown-item" href="/php/compoe.php">Compor Produtos</a>
 								<a class="dropdown-item" href="/php/calcprod.php">Calcular Produção</a>
@@ -122,7 +122,7 @@
 							<a class="btn btn-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" onclick="produto" >Produto</a>
 							<div class="dropdown-menu" id="prod">
 								<a class="dropdown-item" href="/php/cadastro.php">Cadastro de Produto</a>
-								<a class="dropdown-item" href="/php/exit.php">Saída de Produto</a>
+								<a class="dropdown-item" href="/php/exit.php">Vendas de Produtos</a>
 								<a class="dropdown-item" href="/php/listar.php">Listar Produtos</a>
 								<a class="dropdown-item" href="/php/compoe.php">Compor Produtos</a>
 								<a class="dropdown-item" href="/php/calcprod.php">Calcular Produção</a>

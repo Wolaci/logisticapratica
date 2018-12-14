@@ -100,11 +100,12 @@ span.psw {
 
 		<!--input type="text" placeholder="Inserir codigo ou nome do produto" value="<?=$cod?>" name="code" -->
 		 <select name="code" class="form-control" >
+		 <option value="0" >---SELECIONE---</option>
 		<?php foreach ($show as $see ) :?>
                     <option   value="<?=$see['nome']?>"><?=$see['nome']?></option>
                 <?php endforeach ; ?> 
          </select>  
-		<input type="number" placeholder="Inserir quantidade" name="quantities">
+		<input type="number" class="form-control" min="1" placeholder="Inserir quantidade" name="quantities">
 
 		<button type="submit" name="submit">Vender Produtos</button>		
 		<label>
@@ -135,7 +136,7 @@ span.psw {
 		<?php endwhile; ?>
 	</table>
 
-	<a href="/php/pdf/saida.php" ><button>efetuar compra</button></a>
+	<a href="/php/pdf/saida.php" ><button>Gerar relatório</button></a>
 
 	</div>
 	</div>

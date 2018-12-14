@@ -94,7 +94,7 @@
             <?php endforeach ; ?> 
         </select>
         <br>
-        <input class="form-control" type="number" name="quantProdt" placeholder="Digite a quantidade do produto a ser calculada">
+        <input min="1" class="form-control" type="number" name="quantProdt" placeholder="Digite a quantidade do produto a ser calculada">
         <button type="submit" >Calcular</button>
     </form>
 </fieldset>
