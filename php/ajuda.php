@@ -20,13 +20,19 @@ require_once '../php/menu.php';
 
 <div class="container">
 		<div class="t1">
-		<h1> Cadastro de Produtos</h1>
-		<p>Para realizar o cadastro de produtos é necessário fazer login com seu nome de usuário e senha, após fazer isso você deve preencher os campos requisitados que são: o nome do produto, código do produto, validade do produto, data de chegada do produto e o cadastro do lote do produto.</p>
-		<h1>Venda de Produtos</h1>
-		<p>Para realizar a venda de produtos você deve clicar no botão "Produto", após isso você vai clicar em "Saída de produtos" assim você será redirecionado para uma página onde você deve preencher o que é pedido para assim vender o seu produto.</p>
-		<h1> Login</h1>
-		<p>Para fazer login é necessário inserir seu nome de usuário e a senha registrada.</p>
-		<h1> Registro</h1>
-		<p>Antes de poder logar é necessário registrar seu nome de usuário e senha, para fazer isso é necessário clicar no botão "cadastre-se" na tela de login e assim você será direcionado para a tela de registro e poderá registrar seu usuário e senha.</p>
+		<h1>Cadastro</h1>
+		<p>Para se registrar no site é necessário que clique no botão "usuário" e após isso clique em "cadastro" e depois preencher os campos requisitados.</p>
+		<img src="/img/login.png">
+		<h1>Login</h1>
+		<p>Você deve clicar no botão usuário e clicar em login e depois preencher com seu nome de usuário e senha e assim logar-se.</p>
+		<h1>Cadastro de produtos</h1>
+		<p>Para cadastrar novos produtos basta clicar em "Produto" após logar-se e clicar em cadastro de produto e preencher os campos requisitados e depois clicar em "cadastrar no sistema".</p>
+		<img src="/img/cadas.png">
+		<h1>Exluir materiais</h1>
+		<p>Caso deseje elxuir basta clicar no ícone que contém uma lixeira.</p>
+		<img src="/img/lixeiraNew.png">
+		<h1>Vender Produtos</h1>
+		<p>Para vender seus produtos é necessário clicar no ícone que cotém moedas na coluna com nome "vendas", após isso é necessário apenas que você preencha os campos e venda seu produto.</p>
+		<img src="/img/coin.png">
 		</div>
 </div>
